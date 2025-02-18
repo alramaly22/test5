@@ -1,0 +1,444 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'assets/img/logo3.png' %}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <!--=============== AOS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <title>About</title>
+</head>
+<style>
+    #language-selector {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-weight: bold;
+        background-color: #91919159;
+        border: 1px solid;
+        padding: 3px 9px !important;
+        color: hsl(0deg 0% 100%);
+        cursor: pointer;
+        outline: none;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px 15px;
+        width: 76px;
+        text-align: center;
+        direction: ltr;
+        text-align: left;
+    }
+    
+    #language-selector option {
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }
+    
+    #language-selector option[value="en"]::before {
+        content: url('https://flagcdn.com/w40/us.png');
+    }
+    
+    #language-selector option[value="ar"]::before {
+        content: url('https://flagcdn.com/w40/sa.png');
+    }
+    
+    .arabic-font {
+        direction: rtl;
+        text-align: center;
+    }
+    
+    .second-arabic-font {
+        direction: rtl;
+        text-align: right;
+        font-family: 'Cairo', sans-serif;
+    }
+    
+    .se-arab {
+        direction: rtl;
+        text-align: center;
+    }
+</style>
+<title>About Youssef</title>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <!--=============== NAVBAR ===============-->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Youssef Yanni</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link" data-lang="nav1">Home</a></li>
+                    <li><a href="{% url 'index' %}#pricing" class="nav__link" data-lang="nav6">Packages</a></li>
+                    <li><a href="{% url 'index' %}#transformations" class="nav__link" data-lang="nav7">Transformations</a></li>
+                    <li><a href="{% url 'book' %}" class="nav__link cookingnav" data-lang="nav4">Cooking E-book</a></li>
+                    <li><a href="#about" class="nav__link" data-lang="nav2">About Us</a></li>
+                    <li><a href="{% url 'calc' %}" class="nav__link calcnav" data-lang="nav5">Calorie calculator</a></li>
+                    <li><select name="language" id="language-selector">
+                        <option value="en" data-flag="https://flagcdn.com/w40/us.png" selected>En</option>
+                        <option value="ar" data-flag="https://flagcdn.com/w40/eg.png">Ar</option>
+                    </select></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home" data-aos="fade-right">
+            <div class="video-container">
+                <div class="video-overlay"></div>
+            </div>
+            <div class="home__img"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title" data-lang="home1">DISCOUNT up to 50%</h1>
+                    <div class="home__buttons">
+                        <a href="{% url 'index' %}#pricing" class="button" data-lang="Subscr">Subscribe Now</a>
+                        <a href="{% url 'index' %}#transformations" class="button__ghost button" data-lang="transbuttongg">Transformations</a>
+                    </div>
+                </div>
+                <div class="home__social">
+                    <span class="home__social-follow">Follow Us</span>
+                    <div class="home__social-links">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="features section" id="about" data-aos="fade-right">
+            <div class="choose__container container grid">
+                <div class="video__content">
+                    <video id="video-file" class="choose__img" muted autoplay>
+                        <source src="{% static 'assets/video/vtop.mp4' %}" type="video/mp4">
+                    </video>
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="ri-play-large-fill video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+                <div class="choose__contect">
+                    <div class="choose__data">
+                        <h2 class="section__title creative-title">
+                            <p data-lang="about1"> About</p>
+                            <p data-lang="youssefyanni">Youssef Yanni</p>
+                        </h2>
+                    </div>
+                    <p>
+                        <p data-lang="aboutdesc1"> Youssef Yanni is a passionate and dedicated fitness coach with years of experience helping individuals achieve their fitness goals. With a strong background in personalized training and a proven track record from his time at Sky
+                            Gym, Youssef specializes in crafting tailored workout plans and providing motivational guidance.</p>
+
+                        <p data-lang="aboutdesc2"> As an Online Fitness Coach since 2021, he has expanded his reach to support clients worldwide, offering virtual coaching sessions and sharing his expertise in fitness and nutrition. Youssef’s commitment to staying updated with
+                            the latest industry trends ensures that his clients benefit from the most effective strategies for weight management and overall wellness.
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Clients ====================-->
+        <section class="containereea" id="clients" data-aos="fade-right">
+            <div class="testimonial mySwiper">
+                <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <img src="{% static 'assets/img/clients/client8.webp' %}" alt="" class="image" />
+                        <p>الحمدلله والله انا مبسوط جدا بأمانه اول ما شوفت الانبودي يا كوتش انت رهييييب اقسم بالله مش عارف ازاي عملت كده 😂❤️❤️ انا انهارده من اسعد ايام حياتي</p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Eslam reda</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{% static 'assets/img/clients/client6.webp' %}" id="zoomable-image-2" alt="" class="image" />
+                        <p>والله يا جو، أول مرة أشوف النتائج دي في حياتي! بجد، انت مش متخيل إن ده أعلى من توقعاتي بكتير جدًا، واللي أنا فيه دلوقتي ده أنا راضي عنه أوي.</p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Ahmed Mohsen</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{% static 'assets/img/clients/client7.webp' %}" id="zoomable-image-3" alt="" class="image" />
+                        <p>كل حاجه واضحه و تطور رهيب في الخدمه اللي بتقدمها سواء في التمارين او في الاكل انت كل حاجه كتبلي البدائل بتاعتها مش محتاج اجاي اسالك علي اي بدائل و الدايت بلان مكتوبه بالتفاصيل</p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Robert Ramzy</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{% static 'assets/img/clients/client5.webp' %}" id="zoomable-image-4" alt="" class="image" />
+                        <p>باسل كان متربي معانا وكان بيحكي لنا عنك بطريقة، الصراحة، تشجع أي حد يتعرف عليك بشخصك، مش بس علشان أنت بروفشنال. أنا كنت فخورة بكل اللي أنت بتعمله من كلام باسل، بصراحة. بس دلوقتي أنا انبهرت بالمجهود اللي معمول في كل التفاصيل. ربنا يبارك لك أكتر وأكتر، وكمل، وإن شاء الله من نجاح لنجاح.</p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Silvana Ibrahim</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="top: 26rem; right: 15px;" class="swiper-button-next nav-btn"></div>
+                <div style="top: 26rem; left: 15px;" class="swiper-button-prev nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== accordion ====================-->
+        <section class="accordion section container" id="accordion" data-aos="fade-right">
+            <h2 class="section__title" data-lang="faqstitle">Have Any Questions?</h2>
+
+            <div class="accordion__container">
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" data-lang="faqs1">How can Coach Youssef help me achieve my fitness goals?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__description" data-lang="faqs2">
+                            Coach Youssef provides tailored fitness programs designed specifically for your unique goals, whether it’s weight loss, muscle building, or overall health improvement. With his extensive expertise and innovative approach, you’ll experience visible results
+                            and sustainable progress in no time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" data-lang="faqs3">What makes Coach Youssef's approach unique?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__description" data-lang="faqs4">
+                            Coach Youssef is a Certified Nutritionist and also focuses on creating a balance between physical and mental well-being. His programs are not just about exercise but also about fostering a positive mindset and maintaining motivation. He works closely
+                            with clients, offering constant support and adapting routines to ensure they are both enjoyable and effective.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" data-lang="faqs5">How will Coach Youssef’s training impact my daily life?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__description" data-lang="faqs6">
+                            Training with Coach Youssef will boost your energy, improve your mood, and enhance your focus in everyday tasks. The discipline and confidence gained from his training will empower you not just in fitness but in all aspects of your life.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" data-lang="faqs7">What results can I expect from working with Coach Youssef?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__description" data-lang="faqs8">
+                            By working with Coach Youssef, you can expect a stronger, healthier body and a more positive outlook on life. His programs ensure improvements in strength, endurance, and overall fitness while helping you achieve the body transformation you’ve been dreaming
+                            of.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" data-lang="faqs9">Does Coach Youssef offer support outside the gym?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__description" data-lang="faqs10">
+                            Absolutely! Coach Youssef provides continuous guidance and support, whether during in-person training sessions or online. His goal is to build a strong, trusting relationship with each client, ensuring they stay motivated and on track both inside and
+                            outside the gym.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <a style="width: 50%;" href="{% url 'index' %}" class="nav__logo"><img src="{% static 'assets/img/logo3.png' %}" alt=""></a>
+            <div class="footer__contect grid">
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__lik" data-lang="footerhome">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__lik" data-lang="footerabout">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'index' %}#pricing" class="footer__lik" data-lang="footerpricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'calc' %}" class="footer__lik" data-lang="footercalc">Calc</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'book' %}" class="footer__lik" data-lang="nav4">Book</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/youssef.yanni1?mibextid=wwXIfr&rdid=Uo0ES4dwie6CsFfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F179kNgQV6y%2F%3Fmibextid%3DwwXIfr" class="footer__social-link facebook">
+                    <i class="ri-facebook-circle-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/yannileads/?igsh=azFmb2g4azdvbWRm" class="footer__social-link instagram">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://www.tiktok.com/@youssefyanni_?_t=8sNqTMeBp6W&_r=1" class="footer__social-link tiktok">
+                    <i class="ri-tiktok-fill"></i>
+                </a>
+            </div>
+        </div>
+        <span class="footer__copy">
+            &#169; All Rights Reserved By <a style="color: gold; font-size: 1rem; font-weight: 600;" href="https://wa.me/01005718132" class="mmoo" target="_blank">Moalramly</a>
+        </span>
+    </footer>
+
+    <!--========== whatsapp ==========-->
+    <a href="https://wa.me/201208425542" class="whatsapp">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-double-line"></i>
+    </a>
+
+    <script src="https://app.embed.im/snow.js" defer></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/language2.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500
+        });
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        })
+    </script>
+    <script>
+        /*==================== VIDEO ====================*/
+        const videoFile = document.getElementById('video-file');
+        const videoButton = document.getElementById('video-button');
+        const videoIcon = document.getElementById('video-icon');
+
+        function playPause() {
+            if (videoFile.paused) {
+                // Play video
+                videoFile.play();
+                // Change the icon
+                videoIcon.classList.remove('ri-play-large-fill');
+                videoIcon.classList.add('ri-pause-large-fill');
+            } else {
+                // Pause video
+                videoFile.pause();
+                // Change the icon
+                videoIcon.classList.remove('ri-pause-large-fill');
+                videoIcon.classList.add('ri-play-large-fill');
+            }
+        }
+
+        videoButton.addEventListener('click', playPause);
+
+        function finalVideo() {
+            // Video ends, icon change
+            videoIcon.classList.remove('ri-pause-large-fill');
+            videoIcon.classList.add('ri-play-large-fill');
+        }
+
+        // When the video ends
+        videoFile.addEventListener('ended', finalVideo);
+    </script>
+    <script>
+        /*=============== ACCORDION ===============*/
+        const accordionItems = document.querySelectorAll('.accordion__item')
+
+        // 1. Selecionar cada item
+        accordionItems.forEach((item) => {
+            const accordionHeader = item.querySelector('.accordion__header')
+
+            // 2. Seleccionar cada click del header
+            accordionHeader.addEventListener('click', () => {
+                // 7. Crear la variable
+                const openItem = document.querySelector('.accordion-open')
+
+                // 5. Llamar a la funcion toggle item
+                toggleItem(item)
+
+                // 8. Validar si existe la clase
+                if (openItem && openItem !== item) {
+                    toggleItem(openItem)
+                }
+            })
+        })
+
+        // 3. Crear una funcion tipo constante
+        const toggleItem = (item) => {
+                // 3.1 Crear la variable
+                const accordionContent = item.querySelector('.accordion__content')
+
+                // 6. Si existe otro elemento que contenga la clase accorion-open que remueva su clase
+                if (item.classList.contains('accordion-open')) {
+                    accordionContent.removeAttribute('style')
+                    item.classList.remove('accordion-open')
+                } else {
+                    // 4. Agregar el height maximo del content
+                    accordionContent.style.height = accordionContent.scrollHeight + 'px'
+                    item.classList.add('accordion-open')
+                }
+            }
+            // calc video
+    </script>
+</body>
+
+</html>

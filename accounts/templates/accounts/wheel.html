@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel App</title>
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/logo3.png' %}"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/wheel.css' %}" />
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <nav class="nav containere">
+        <a href="{% url 'index' %}" class="nav__logo">Youssef Yanni</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a
+                href="{% url 'index' %}#home"
+                class="nav__link"
+                data-lang="nav1"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'index' %}#pricing"
+                class="nav__link"
+                data-lang="nav6"
+                >Packages</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'index' %}#new" class="nav__link" data-lang="nav7"
+                >Transformations</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'book' %}"
+                class="nav__link cookingnav"
+                data-lang="nav4"
+                >Cooking E-book</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'index' %}#about"
+                class="nav__link"
+                data-lang="nav2"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'calc' %}"
+                class="nav__link calcnav"
+                data-lang="nav5"
+                >Calorie calculator</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i style="color: white" class="ri-apps-2-line"></i>
+        </div>
+      </nav>
+    </header>
+    <section class="header-section">
+      <h1>How to Use the Spin Wheel</h1>
+      <ol>
+        <li>Enter your name in the text box.</li>
+        <li>Click the "Spin" button once to start spinning.</li>
+        <li>After the wheel stops, take a screenshot of the result.</li>
+        <li>Send the screenshot to the captain via WhatsApp.</li>
+      </ol>
+      <a href="https://wa.me/201208425542" target="_blank">
+        <button id="whatsapp-btn">Send to Captain on WhatsApp</button>
+      </a>
+    </section>
+
+    <div class="wrapper">
+      <input type="text" id="username" placeholder="Enter your name" />
+      <div class="container">
+        <canvas id="wheel" width="400" height="400"></canvas>
+        <button id="spin-btn" disabled>Spin</button>
+        <img src="assets/img/ss.svg" alt="spinner-arrow" />
+      </div>
+      <div id="final-value">
+        <p style="color: white">Click On The Spin Button To Start</p>
+      </div>
+    </div>
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- Script -->
+    <script>
+      const wheel = document.getElementById("wheel");
+      const spinBtn = document.getElementById("spin-btn");
+      const finalValue = document.getElementById("final-value");
+      const usernameInput = document.getElementById("username");
+      const ctx = wheel.getContext("2d");
+
+      // Configuration for the wheel
+      const sections = [
+        {
+          value: "50% Discount",
+          image: "assets/img/GIFT/1.png",
+        },
+        {
+          value: "30% Discount",
+          image: "assets/img/GIFT/1.png",
+        },
+        {
+          value: "50% Discount",
+          image: "assets/img/GIFT/1.png",
+        },
+        {
+          value: "+1 Free Month On Your Subscriptions",
+          image: "assets/img/GIFT/1.png",
+        },
+        {
+          value: "70% Discount",
+          image: "assets/img/GIFT/1.png",
+        },
+      ];
+
+      const sectionColors = [
+        "#ff0000",
+        "#008000",
+        "#ffd700",
+        "#ffffff",
+        "#000",
+      ];
+      const totalSections = sections.length;
+      const sectionAngle = 360 / totalSections;
+
+      // Function to draw the wheel
+      function drawWheel() {
+        sections.forEach((section, index) => {
+          const startAngle = (index * sectionAngle * Math.PI) / 180;
+          const endAngle = ((index + 1) * sectionAngle * Math.PI) / 180;
+
+          // Draw section
+          ctx.beginPath();
+          ctx.moveTo(200, 200);
+          ctx.arc(200, 200, 200, startAngle, endAngle);
+          ctx.closePath();
+          ctx.fillStyle = sectionColors[index];
+          ctx.fill();
+
+          // Draw image
+          const img = new Image();
+          img.src = section.image;
+          img.onload = () => {
+            const angle = startAngle + (endAngle - startAngle) / 2;
+            const x = 200 + Math.cos(angle) * 120 - 25; // Adjust x position
+            const y = 200 + Math.sin(angle) * 120 - 25; // Adjust y position
+            ctx.drawImage(img, x, y, 50, 50); // Draw image
+          };
+        });
+      }
+
+      // Call drawWheel initially
+      drawWheel();
+
+      // Check if the wheel has already been spun
+      if (localStorage.getItem("hasSpun") === "true") {
+        spinBtn.disabled = true;
+        finalValue.innerHTML = `<p style="color:white;">You have already spinned the wheel!</p>`;
+      } else {
+        // Spinner logic
+        let currentAngle = 0;
+        let spinning = false;
+        let hasSpun = false;
+
+        usernameInput.addEventListener("input", () => {
+          spinBtn.disabled = usernameInput.value.trim() === "";
+        });
+
+        spinBtn.addEventListener("click", () => {
+          if (spinning || hasSpun) return;
+          spinning = true;
+          finalValue.innerHTML = `<p>Good Luck!</p>`;
+
+          const randomSpin = Math.floor(Math.random() * 360) + 360 * 5; // Spin multiple times
+          const spinInterval = setInterval(() => {
+            currentAngle += 10;
+            wheel.style.transform = `rotate(${currentAngle % 360}deg)`;
+            if (currentAngle >= randomSpin) {
+              clearInterval(spinInterval);
+              spinning = false;
+              hasSpun = true;
+
+              const finalAngle = currentAngle % 360;
+              const winningIndex = Math.floor(finalAngle / sectionAngle);
+              const winningSection = sections[totalSections - 1 - winningIndex];
+
+              // Store the fact that the wheel has been spun
+              localStorage.setItem("hasSpun", "true");
+
+              // Display the winning section
+              finalValue.innerHTML = `
+                    <p style="color:white; font-size: 1em; font-weight: bold;">Congratulations, you won </p>
+                    <p style="color: red; font-size: 1.5em; font-weight: bold;">${winningSection.value}</p>
+                    <img src="${winningSection.image}" alt="Result" style="max-width: 100px;" />
+                `;
+            }
+          }, 10);
+        });
+      }
+    </script>
+    <script>
+      // الحصول على العناصر من الصفحة
+      const navMenu = document.getElementById("nav-menu");
+      const navToggle = document.getElementById("nav-toggle");
+
+      /*===== TOGGLE MENU =====*/
+      if (navToggle) {
+        navToggle.addEventListener("click", () => {
+          // تبديل حالة إظهار القائمة
+          navMenu.classList.toggle("show-menu");
+        });
+      }
+
+      /*===== REMOVE MENU WHEN CLICKING A LINK =====*/
+      const navLink = document.querySelectorAll(".nav__link");
+      navLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          // إزالة الكلاس show-menu عند النقر على أي رابط داخل القائمة
+          navMenu.classList.remove("show-menu");
+        });
+      });
+
+      /*=============== CHANGE BACKGROUND HEADER ===============*/
+      const scrollHeader = () => {
+        const header = document.getElementById("header");
+        // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+        this.scrollY >= 50
+          ? header.classList.add("scroll-header")
+          : header.classList.remove("scroll-header");
+      };
+      window.addEventListener("scroll", scrollHeader);
+    </script>
+    {% comment %}
+    <script src="https://app.embed.im/snow.js" defer></script>
+    {% endcomment %}
+  </body>
+</html>

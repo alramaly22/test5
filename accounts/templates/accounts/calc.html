@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+     <!--=============== FAVICON ===============-->
+     <link
+     rel="shortcut icon"
+     href="{% static 'assets/img/logo.png' %}"
+     type="image/x-icon"
+   />
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <title>Responsive pizza website - Bedimcode</title>
+</head>
+<style>
+    #language-selector {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-weight: bold;
+        background-color: #91919159;
+        border: 1px solid;
+        padding: 3px 9px !important;
+        color: hsl(0deg 0% 100%);
+        /* border: none; */
+        /* border-radius: 1rem; */
+        cursor: pointer;
+        outline: none;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px 15px;
+        width: 76px;
+        text-align: center;
+        direction: ltr;
+        text-align: left;
+    }
+    
+    #language-selector option {
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }
+    
+    #language-selector option[value="en"]::before {
+        content: url('https://flagcdn.com/w40/us.png');
+    }
+    
+    #language-selector option[value="ar"]::before {
+        content: url('https://flagcdn.com/w40/sa.png');
+    }
+    /* تحديد مكان النص للغة العربية فقط */
+    
+    .arabic-font {
+        direction: rtl;
+        text-align: center;
+    }
+    
+    .second-arabic-font {
+        direction: rtl;
+        text-align: right;
+        font-family: 'Cairo', sans-serif;
+    }
+    
+    .se-arab {
+        direction: rtl;
+        text-align: center;
+    }
+</style>
+<title>Youssef Yanni</title>
+</head>
+
+<body>
+    <!-- <div id="preloader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div> -->
+    <!--=============== NAVBAR ===============-->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'index' %}" class="nav__logo">Youssef Yanni</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="{% url 'index' %}" class="nav__link" data-lang="nav1">Home</a></li>
+                    <li><a href="{% url 'index' %}#pricing" class="nav__link" data-lang="nav6">Packages</a></li>
+                    <li><a href="{% url 'index' %}#new" class="nav__link" data-lang="nav7">Transformations</a></li>
+                    <li><a href="{% url 'book' %}" class="nav__link cookingnav" data-lang="nav4">Cooking E-book</a></li>
+                    <li><a href="{% url 'index' %}#about" class="nav__link" data-lang="nav2">About Us</a></li>
+                    <li><a href="{% url 'calc' %}" class="nav__link calcnav" data-lang="nav5">Calorie calculator</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <div class="section calculate">
+            <div class="containerform" id="loginForm">
+                <h1>Login</h1>
+                <form id="login">
+                    <label for="name">Name:</label>
+                    <input type="text" name="user_name" id="name" required>
+
+                    <label for="phone">WhatsApp/Phone Number:</label>
+                    <input type="tel" name="user_phone" id="phone" pattern="^\d{11}$" required placeholder="11-digit number">
+
+                    <button class="button" type="submit">Login</button>
+                </form>
+                <p class="custom-alert-success" id="success-message" data-lang="customer3">Booking confirmed. The coach will contact you shortly.</p>
+                <p id="contact-message"></p>
+            </div>
+
+            <div class="containerform hidden" id="calculatorForm">
+                <h1>Calorie Calculator</h1>
+                <form id="calorieForm">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="age">Age (years):</label>
+                    <input type="number" id="age" required>
+
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" required>
+
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" required>
+
+                    <label for="goal">Goal:</label>
+                    <select id="goal" required>
+                        <option value="lose">Lose Weight</option>
+                        <option value="maintain">Maintain Weight</option>
+                        <option value="gain">Gain Weight</option>
+                    </select>
+
+                    <label for="activity-level">Activity Level:</label>
+                    <div class="activity-level" id="activity-level">
+                        <label><input type="radio" name="activity" value="sedentary" required> Sedentary</label>
+                        <label><input type="radio" name="activity" value="light"> Light</label>
+                        <label><input type="radio" name="activity" value="moderate"> Moderate</label>
+                        <label><input type="radio" name="activity" value="active"> Active</label>
+                        <label><input type="radio" name="activity" value="very_active"> Very Active</label>
+                    </div>
+
+                    <button class="button" type="submit">Calculate</button>
+                </form>
+                <div id="result" class="hidden">
+                    <h2>Your Results:</h2>
+                    <p>Target calorie intake per day:</p>
+                    <div class="calories">0</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+        const contactForm = document.getElementById('login');
+        const contactMessage = document.getElementById('contact-message');
+
+        const sendEmail = (e) => {
+            e.preventDefault();
+
+            // Service Id - templateID - #form -publickey
+            emailjs.sendForm('service_6z1b0ll', 'template_h9kcrpf', '#login', 'V0PDbA02Wxns8ppoS')
+                .then(() => {
+                    // Show sent message
+                    contactMessage.textContent = 'Message sent successfully';
+
+                    // Remove message after five seconds
+                    setTimeout(() => {
+                        contactMessage.textContent = '';
+                    }, 5000);
+
+                    // Clear input 
+                    contactForm.reset();
+                }, () => {
+                    // Show error message
+                    contactMessage.textContent = 'Message not sent (service error)';
+                });
+        }
+
+        contactForm.addEventListener('submit', sendEmail);
+    </script>
+    <script>
+        const loginForm = document.getElementById('login');
+        const calculatorForm = document.getElementById('calculatorForm');
+        const loginContainer = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // استخدام الأسماء الجديدة في HTML (name و phone)
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            // التحقق من أن الحقول ليست فارغة
+            if (name && phone) {
+                loginContainer.classList.add('hidden');
+                calculatorForm.classList.remove('hidden');
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        const calorieForm = document.getElementById('calorieForm');
+        const result = document.getElementById('result');
+        const caloriesElement = document.querySelector('.calories');
+
+        calorieForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const sex = document.getElementById('sex').value;
+            const age = parseInt(document.getElementById('age').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const goal = document.getElementById('goal').value;
+            const activity = document.querySelector('input[name="activity"]:checked').value;
+
+            let bmr;
+            if (sex === 'male') {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            let activityFactor;
+            switch (activity) {
+                case 'sedentary':
+                    activityFactor = 1.2;
+                    break;
+                case 'light':
+                    activityFactor = 1.375;
+                    break;
+                case 'moderate':
+                    activityFactor = 1.55;
+                    break;
+                case 'active':
+                    activityFactor = 1.725;
+                    break;
+                case 'very_active':
+                    activityFactor = 1.9;
+                    break;
+                default:
+                    activityFactor = 1;
+            }
+
+            const maintenanceCalories = bmr * activityFactor;
+
+            let goalCalories;
+            if (goal === 'lose') {
+                goalCalories = maintenanceCalories - 500;
+            } else if (goal === 'gain') {
+                goalCalories = maintenanceCalories + 500;
+            } else {
+                goalCalories = maintenanceCalories;
+            }
+
+            caloriesElement.textContent = Math.round(goalCalories);
+            result.classList.remove('hidden');
+        });
+    </script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+    <!-- <Script src="assets/js/language.js"></Script> -->
+</body>
+
+</html>

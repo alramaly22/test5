@@ -1,0 +1,734 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="{% static 'assets/img/logo3.png' %}"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/swiper-bundle.min.css' %}"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <style>
+      #language-selector {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-weight: bold;
+        background-color: #91919159;
+        border: 1px solid;
+        padding: 3px 9px !important;
+        color: hsl(0deg 0% 100%);
+        cursor: pointer;
+        outline: none;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px 15px;
+        width: 76px;
+        text-align: center;
+        direction: ltr;
+        text-align: left;
+      }
+
+      #language-selector option {
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+        color: black;
+      }
+
+      #language-selector option[value="en"]::before {
+        content: url("https://flagcdn.com/w40/us.png");
+      }
+
+      #language-selector option[value="ar"]::before {
+        content: url("https://flagcdn.com/w40/sa.png");
+      }
+
+      .arabic-font {
+        direction: rtl;
+        text-align: center;
+      }
+
+      .second-arabic-font {
+        direction: rtl;
+        text-align: right;
+        font-family: "Cairo", sans-serif;
+      }
+
+      .se-arab {
+        direction: rtl;
+        text-align: center;
+      }
+    </style>
+    <title>Youssef Yanni</title>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <!--=============== NAVBAR ===============-->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="{% url 'index' %}" class="nav__logo">Youssef Yanni</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="{% url 'index' %}" class="nav__link" data-lang="nav1"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'index' %}#pricing"
+                class="nav__link"
+                data-lang="nav6"
+                >Packages</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'index' %}#transformations"
+                class="nav__link"
+                data-lang="nav7"
+                >Transformations</a
+              >
+            </li>
+            <li>
+              <a href="#price" class="nav__link cookingnav" data-lang="nav4"
+                >Cooking E-book</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'about' %}" class="nav__link" data-lang="nav2"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'calc' %}"
+                class="nav__link calcnav"
+                data-lang="nav5"
+                >Calorie calculator</a
+              >
+            </li>
+            <li>
+              <select name="language" id="language-selector">
+                <option
+                  value="en"
+                  data-flag="https://flagcdn.com/w40/us.png"
+                  selected
+                >
+                  En
+                </option>
+                <option value="ar" data-flag="https://flagcdn.com/w40/eg.png">
+                  Ar
+                </option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-2-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--====================Home====================-->
+      <section class="home3" id="home2">
+        <div class="home2__container container">
+          <div class="home__data5">
+            <h1 class="home__title5">
+              <p data-lang="home3p3">Achieve Your Fitness Goals & Transform</p>
+              <p data-lang="home3p2">Your Lifestyle</p>
+            </h1>
+            <p class="home__description5" data-lang="home3p1">
+              This e-book is your ultimate guide to achieving a healthier and
+              more active lifestyle. Packed with easy-to-follow meal plans,
+              organized recipes, and low-calorie options, it offers simple and
+              effective ways to meet your fitness goals. Whether you're just
+              starting or looking to refine your diet, this guide is designed to
+              make healthy living effortless. Start your journey today and
+              invest in a better, healthier you!
+            </p>
+          </div>
+          <div class="home2__images">
+            <div style="margin-inline: initial" class="home__swiper swiper">
+              <div class="swiper-wrapper">
+                <article
+                  style="text-align: center"
+                  class="homee2__article swiper-slide"
+                >
+                  <img
+                    src="{% static 'assets/img/book/book3.webp' %}"
+                    alt=""
+                    class="home2__img"
+                  />
+                </article>
+                <article
+                  style="text-align: center"
+                  class="homee2__article swiper-slide"
+                >
+                  <img
+                    src="{% static 'assets/img/book/book2.webp' %}"
+                    alt=""
+                    class="home2__img"
+                  />
+                </article>
+                <article
+                  style="text-align: center"
+                  class="homee2__article swiper-slide"
+                >
+                  <img
+                    src="{% static 'assets/img/book/book1.webp' %}"
+                    alt=""
+                    class="home2__img"
+                  />
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== blog ====================-->
+      <section class="blog-section" id="blogs" data-aos="fade-right">
+        <h1 data-lang="blog1">Discover Delicious Recipes from Our E-Book</h1>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <img
+              src="{% static 'assets/img/food/food5.webp' %}"
+              alt="Pancakes"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title" data-lang="blog2">Fluffy Pancakes</h2>
+              <p class="blog-text" data-lang="blog3">
+                A sneak peek from our e-book: these light and fluffy pancakes
+                are easy to make with simple ingredients. Perfect for a healthy
+                and quick breakfast!
+              </p>
+              <a href="#" class="blog-button" data-lang="blogbutton"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="blog-card">
+            <img
+              src="{% static 'assets/img/food/food6.webp' %}"
+              alt="Pizza"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title" data-lang="bloghealthy">Healthy Pizza</h2>
+              <p class="blog-text" data-lang="blogdescription">
+                Straight from the e-book, this pizza is made with a nutritious
+                twist and simple toppings. A guilt-free delight for pizza
+                lovers!
+              </p>
+              <a href="#" class="blog-button" data-lang="blogbuttonreamode"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="blog-card">
+            <img
+              src="{% static 'assets/img/food/food7.webp' %}"
+              alt="Cupcakes"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title" data-lang="bloglowcalore">
+                Low-Calorie Cupcakes
+              </h2>
+              <p class="blog-text" data-lang="bloglowcaloreidescription">
+                These cupcakes are a highlight from the e-book, featuring a
+                low-calorie recipe that’s both delicious and easy to prepare.
+              </p>
+              <a href="#" class="blog-button">Read More</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img
+              src="{% static 'assets/img/food/food8.webp' %}"
+              alt="Egg Rolls"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title" data-lang="blogegg">Egg Rolls</h2>
+              <p class="blog-text" data-lang="blogeggebook">
+                From the e-book’s collection: these egg rolls are packed with
+                flavor and require minimal effort to prepare. Perfect for any
+                time of day!
+              </p>
+              <a href="#" class="blog-button">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== offer ====================-->
+      <section class="discount-section" id="download" data-aos="fade-left">
+        <div class="discount-content">
+          <div class="discount-text-container">
+            <h2 class="discount-title" data-lang="offer">
+              Get 50% Off on the Recipe Book!
+            </h2>
+            <p class="discount-text" data-lang="offerp">
+              Take advantage of this opportunity to get the book with the best
+              healthy and easy recipes. Offer valid for a limited time only!
+            </p>
+            <p class="discount-demo-text" data-lang="offerp2">
+              Available Now: You can download a free version to explore the
+              quality and simplicity of the recipes.
+            </p>
+            <div class="discount-buttons">
+              <a href="#price" class="btn btn-buy" data-lang="offerbuttonbut"
+                >Buy Now</a
+              >
+              <a
+                href="{% static 'assets/FREE TRIAL‼️👨_🍳 5 Recipes .pdf' %}"
+                download=""
+                class="btn btn-demo"
+                data-lang="offerdownload"
+                >Download The Free Trial</a
+              >
+            </div>
+          </div>
+          <div class="discount-image-container">
+            <img
+              src="{% static 'assets/img/book/book1.webp' %}"
+              alt="Recipe Book Image"
+              class="discount-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--==================== package ====================-->
+      <section class="packagess section" id="price" data-aos="fade-right">
+        <h1 class="section__title" data-lang="pricingselect">
+          Catch the offer
+        </h1>
+        <div class="package-container">
+          <!-- Package 1 Premium -->
+          <div class="package bookpachage">
+            <h2 data-lang="pricinghealthriciper">Healthy Recipe Book</h2>
+            <p class="price"><del>EGP 500</del> <span>EGP 399</span></p>
+            <button
+              class="animationbutttonpricieng"
+              id="buy-now"
+              data-lang="buynowpricing"
+            >
+              Buy Now
+            </button>
+            <p class="animated-line" data-lang="pricingavailable">
+              Available Now
+            </p>
+            <ul>
+              <li>
+                <i class="ri-check-fill iconprice"></i>
+                <span data-lang="pricingover1" style="color: white">
+                  Over 50 quick and healthy recipes that you'll never get bored
+                  of.</span
+                >
+              </li>
+              <li>
+                <i class="ri-check-fill iconprice"></i>
+                <span data-lang="pricingover2" style="color: white">
+                  Low-calorie recipes, including desserts, savory dishes, and
+                  drinks.</span
+                >
+              </li>
+              <li>
+                <i class="ri-check-fill iconprice"></i>
+                <span data-lang="pricingover3" style="color: white">
+                  Simple and quick preparation methods to save time and deliver
+                  amazing results.</span
+                >
+              </li>
+              <li>
+                <i class="ri-check-fill iconprice"></i>
+                <span data-lang="pricingover4" style="color: white">
+                  A book designed to help you achieve your health goals with no
+                  excuses.</span
+                >
+              </li>
+              <li>
+                <i class="ri-check-fill iconprice"></i>
+                <span data-lang="pricingover5" style="color: white">
+                  Innovative recipes that provide great results with minimal
+                  calories.</span
+                >
+              </li>
+            </ul>
+            <p class="descriptionbookred">
+              <span data-lang="pricingspan"
+                >Discover the Secret to Healthy Living!</span
+              >
+              <br />
+              <br /><span
+                data-lang="pricingspan2"
+                style="font-size: 0.9rem; color: white"
+              >
+                The book features over 50 quick and easy-to-prepare healthy
+                recipes, designed to help you achieve amazing results
+                effortlessly. Each recipe is carefully crafted to save time
+                while offering delicious, nutritious meals with minimal
+                calories.</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== custom ====================-->
+      <div class="custom-alert-container" id="alert-container">
+        <div class="custom-alert-box">
+          <button class="custom-alert-close-btn" id="close-alert">
+            &times;
+          </button>
+          <h2 class="custom-alert-title" data-lang="customer1"></h2>
+          <form action="" id="contact-form">
+            <input
+              type="text"
+              name="user_name"
+              class="custom-alert-input"
+              id="name"
+              placeholder="Name"
+            />
+            <input
+              type="number"
+              name="whats_app"
+              class="custom-alert-input"
+              id="whatsapp"
+              placeholder="WhatsApp Number"
+            />
+            <input
+              type="email"
+              name="user_email"
+              class="custom-alert-input"
+              id="email"
+              placeholder="Email"
+            />
+            <button
+              class="custom-alert-btn"
+              id="submit-alert"
+              data-lang="customer2"
+            >
+              Submit
+            </button>
+          </form>
+          <p
+            class="custom-alert-success"
+            id="success-message"
+            data-lang="customer3"
+          >
+            Booking confirmed. The coach will contact you shortly.
+          </p>
+          <p id="contact-message"></p>
+        </div>
+      </div>
+
+      <!--==================== Clients ====================-->
+      <section class="containereea" id="clients" data-aos="fade-left">
+        <div class="testimonial mySwiper">
+          <div class="testi-content swiper-wrapper">
+            <div class="slide swiper-slide">
+              <img
+                src="{% static 'assets/img/clients/client1.webp' %}"
+                alt=""
+                class="image"
+              />
+              <p>
+                انت خليتني اغير من طريقه تفكيري عن الاكل خالص انا كنت بنهار من
+                قله الاكل و الصحه قبل كده فعلا
+              </p>
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+              <div class="details">
+                <span class="name" data-lang="clientsname1">simone Abdo</span>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img
+                src="{% static 'assets/img/clients/client2.webp' %}"
+                id="zoomable-image-2"
+                alt=""
+                class="image"
+              />
+              <p>
+                انا مش متخيل انك عامل الكتاب ده انا بطبخ و بقولك ان ديه من احسن
+                الحاجات اللي شوفتها والله
+              </p>
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+              <div class="details">
+                <span class="name" data-lang="clientsname2">Ahmed Adel</span>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img
+                src="{% static 'assets/img/clients/client3.webp' %}"
+                id="zoomable-image-3"
+                alt=""
+                class="image"
+              />
+              <p>
+                انا حبيت الدايت بسببه والله و انا لو كده اصلا مش هحتاج شيت ميل ,
+                و الجامد كمان ان فيه طريقه التحضير فا خلاني احب الدايت
+              </p>
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+              <div class="details">
+                <span class="name" data-lang="clientsname3"
+                  >Mahmoud Sherif</span
+                >
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img
+                src="{% static 'assets/img/clients/client4.webp' %}"
+                id="zoomable-image-4"
+                alt=""
+                class="image"
+              />
+              <p>حلو جدا الكتاب و فيه طرق مختلفه كتير اوي بجد احلي شغل</p>
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+              <div class="details">
+                <span class="name" data-lang="clientsname4">lucie samy</span>
+              </div>
+            </div>
+          </div>
+          <div
+            style="top: 26rem; right: 15px"
+            class="swiper-button-next nav-btn"
+          ></div>
+          <div
+            style="top: 26rem; left: 15px"
+            class="swiper-button-prev nav-btn"
+          ></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <a style="width: 50%" href="{% url 'index' %}" class="nav__logo"
+          ><img src="{% static 'assets/img/logo3.png' %}" alt=""
+        /></a>
+        <div class="footer__contect grid">
+          <ul class="footer__links">
+            <li>
+              <a
+                href="{% url 'index' %}"
+                class="footer__lik"
+                data-lang="footerhome"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'about' %}"
+                class="footer__lik"
+                data-lang="footerabout"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#pricing" class="footer__lik" data-lang="footerpricing"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'calc' %}"
+                class="footer__lik"
+                data-lang="footercalc"
+                >Calc</a
+              >
+            </li>
+            <li>
+              <a href="#home" class="footer__lik" data-lang="nav4">Book</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <a
+            href="https://www.facebook.com/youssef.yanni1?mibextid=wwXIfr&rdid=Uo0ES4dwie6CsFfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F179kNgQV6y%2F%3Fmibextid%3DwwXIfr"
+            class="footer__social-link facebook"
+          >
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/yannileads/?igsh=azFmb2g4azdvbWRm"
+            class="footer__social-link instagram"
+          >
+            <i class="ri-instagram-fill"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@youssefyanni_?_t=8sNqTMeBp6W&_r=1"
+            class="footer__social-link tiktok"
+          >
+            <i class="ri-tiktok-fill"></i>
+          </a>
+        </div>
+      </div>
+      <span class="footer__copy">
+        &#169; All Rights Reserved By
+        <a
+          style="color: gold; font-size: 1rem; font-weight: 600"
+          href="https://wa.me/01005718132"
+          class="mmoo"
+          target="_blank"
+          >Moalramly</a
+        >
+      </span>
+    </footer>
+
+    <!--========== whatsapp ==========-->
+    <a href="https://wa.me/201208425542" class="whatsapp">
+      <i class="ri-whatsapp-fill"></i>
+    </a>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-double-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize EmailJS
+        emailjs.init("V0PDbA02Wxns8ppoS"); // استبدل YOUR_USER_ID بالمفتاح العام الخاص بك
+
+        document
+          .getElementById("buy-now")
+          .addEventListener("click", function () {
+            document.getElementById("alert-container").classList.add("active");
+          });
+
+        document
+          .getElementById("close-alert")
+          .addEventListener("click", function () {
+            document
+              .getElementById("alert-container")
+              .classList.remove("active");
+          });
+
+        document
+          .getElementById("submit-alert")
+          .addEventListener("click", function () {
+            const name = document.getElementById("name").value;
+            const whatsapp = document.getElementById("whatsapp").value;
+            const email = document.getElementById("email").value;
+
+            if (name && whatsapp && email) {
+              document.getElementById("success-message").style.display =
+                "block";
+              setTimeout(function () {
+                document
+                  .getElementById("alert-container")
+                  .classList.remove("active");
+                document.getElementById("success-message").style.display =
+                  "none";
+              }, 3000);
+            } else {
+              alert("يرجى ملء جميع الحقول.");
+            }
+          });
+
+        const contactForm = document.getElementById("contact-form");
+        const contactMessage = document.getElementById("contact-message");
+
+        const sendEmail = (e) => {
+          e.preventDefault();
+
+          // Service Id - templateID - #form -publickey
+          emailjs
+            .sendForm(
+              "service_q6ibnrf",
+              "template_zvlj959",
+              "#contact-form",
+              "V0PDbA02Wxns8ppoS"
+            )
+            .then(
+              () => {
+                // Show sent message
+                contactMessage.textContent = "Message sent successfully";
+
+                // Remove message after five seconds
+                setTimeout(() => {
+                  contactMessage.textContent = "";
+                }, 5000);
+
+                // Clear input
+                contactForm.reset();
+              },
+              () => {
+                // Show error message
+                contactMessage.textContent = "Message not sent (service error)";
+              }
+            );
+        };
+
+        contactForm.addEventListener("submit", sendEmail);
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 1500,
+      });
+    </script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    {% comment %}
+    <script src="https://app.embed.im/snow.js" defer></script>
+    {% endcomment %}
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/language.js' %}"></script>
+  </body>
+</html>

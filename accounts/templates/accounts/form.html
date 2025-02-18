@@ -1,0 +1,771 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'assets/img/logo.png' %}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--=============== REMIXICONS ===============-->
+    <meta name="description" content="Youssef Yanni, a professional bodybuilding coach with 29 years of experience, helps you achieve your goals with transformative training programs and fitness expertise." />
+    <meta property="og:title" content="Youssef Yanni - Professional Bodybuilding Coach" />
+    <meta property="og:description" content="Youssef Yanni offers personalized training programs for weight loss, muscle gain, and competition prep. Start your fitness journey today!" />
+
+    <!-- <link rel="stylesheet" href="{% static 'css/navform.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'assets/css/masterform.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/mm.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+
+    <style>
+        #language-selector {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            font-weight: bold;
+            background-color: #91919159;
+            border: 1px solid;
+            padding: 3px 9px !important;
+            color: hsl(0deg 0% 100%);
+            /* border: none; */
+            /* border-radius: 1rem; */
+            cursor: pointer;
+            outline: none;
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px 15px;
+            width: 76px;
+            text-align: center;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        #language-selector option {
+            font-size: 16px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+        
+        #language-selector option[value="en"]::before {
+            content: url('https://flagcdn.com/w40/us.png');
+        }
+        
+        #language-selector option[value="ar"]::before {
+            content: url('https://flagcdn.com/w40/sa.png');
+        }
+        /* تحديد مكان النص للغة العربية فقط */
+        
+        .arabic-font {
+            direction: rtl;
+            text-align: center;
+        }
+        
+        .second-arabic-font {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .se-arab {
+            direction: rtl;
+            text-align: center;
+        }
+    </style>
+    <title>Form</title>
+
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav containere">
+          <a href="{% url 'index' %}" class="nav__logo">
+            <img src="{% static 'assets/img/logo3.png' %}" alt="" id="logo">
+        </a>
+        
+            <!-- <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link" data-lang="nav1">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link" data-lang="nav2">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link" data-lang="nav4">Pricing</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link" data-lang="nav5">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+            </div> -->
+
+            <!-- <div class="nav__buttons">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+            </div> -->
+            <select name="language" id="language-selector">
+                <option value="en" data-flag="https://flagcdn.com/w40/us.png" selected>En</option>
+                <option value="ar" data-flag="https://flagcdn.com/w40/sa.png">Ar</option>
+            </select>
+        </nav>
+    </header>
+
+
+
+
+<h1>Welcom To Team Yanni</h1>
+  </br>
+    <button class="button" id="toggleButton" data-lang="buttonformstart">Get Start</button>
+    <section class="wrapper hidden" id="imageSection">
+        <div class="form signup">
+            <!-- multistep form -->
+
+
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+                </ul>
+                <!-- fieldsets -->
+                <fieldset class="fi">
+                    <h2 class="fs-title" data-lang="formquestion1">Question 1</h2>
+                    <label class="lab" for="name" data-lang="formquetionname">Your Name</label>
+                    <input type="text" name="CAT_Custom_1" id="name" placeholder="Name" />
+                    <label class="lab" for="age" data-lang="formquetionage">Your Age</label>
+                    <input type="number" name="CAT_Custom_2" id="age" placeholder="Age" required />
+
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+                <fieldset class="fi">
+                    <h2 class="fs-title" data-lang="formquestion2">Question 2</h2>
+                    <!-- <label style="color: white;" for="CAT_Custom_2" data-lang="qutionheight">Your Height?</label> -->
+                    <div class="mk" style="    display: flex; flex-direction: column;gap: 1rem;">
+                        <label style="color: white;" for="CAT_Custom_2" data-lang="qutionheight">Your Height?</label>
+                        <input type="number" name="CAT_Custom_2" id="CAT_Custom_2" placeholder="Your Height?" required />
+
+                        <label style="color: white;" for="range-weight" data-lang="qutionweight">Your Weight?</label>
+                        <input type="number" required name="range-weight" id="range-weight" placeholder="Your Weight?" pattern="\d+" title="Your Weight?" />
+                    </div>
+                    <input type="button" name="previous" class="previous action-button butt" required value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution3">Question 3</h2>
+                    <h3 class="fs-subtitle" data-lang="qutiongender">What is your gender?</h3>
+                    <!-- قم بإضافة ملصق للحقل -->
+                    <div class="f">
+                        <div class="fy">
+                            <label style="color: white;" for="gender-male" data-lang="qutionmale">Male</label>
+                            <input class="checkboxo" type="radio" name="gender" id="gender-male" value="Male" required>
+                            <!-- تعيين القيمة "ذكر" للإجابة الإيجابية -->
+                        </div>
+
+                        <div class="fn">
+                            <label style="color: white;" for="gender-female" data-lang="qutionfemale">Female</label>
+                            <input class="checkboxo" type="radio" name="gender" id="gender-female" value="Female" required>
+                            <!-- تعيين القيمة "أنثى" للإجابة السلبية -->
+                        </div>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="formqution4">Question 4</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionprotein">Choose your favorite protein types:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="chicken"> 
+                           <span data-lang="qutionchicken"> Boiled or grilled chicken 🍗</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="beef"> 
+                         <span data-lang="qutionbeef">   Boiled or grilled beef 🥩</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="fish"> 
+                           <span data-lang="qutionfish"> Fish (Tuna - Tilapia - Salmon - Shrimp) 🍣 🍤</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="eggs"> 
+                           <span data-lang="qutioneggs"> Boiled or omelet eggs 🥚🍳</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="turkey"> 
+                          <span data-lang="qutionturkey">  Smoked turkey 🦃</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="cottage_cheese"> 
+                          <span data-lang="qutioncottagecheese">  Cottage cheese 🧀</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="protein_type" value="greek_yogurt"> 
+                           <span data-lang="qutiongreekyogurt"> Greek yogurt</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================newm 1================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="formqution5">Question 5</h2>
+                    <h3 class="fs-subtitle" data-lang="qutioncarbs">Choose your favorite carbohydrate types:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="oats"> 
+                            <span data-lang="qutionoats">Oats</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="brown_toast" > 
+                         <span data-lang="qutionbrowntoast">Brown toast bread 🍞</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="white_rice"> 
+                           <span  data-lang="qutionwhiterice"> White rice 🍚</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="potatoes"> 
+                            <span data-lang="qutionpotatoes">Potatoes 🫐</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="pasta"> 
+                            <span data-lang="qutionpasta">Pasta</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="sweet_potatoes"> 
+                           <span  data-lang="qutionsweetpotatoes"> Sweet potatoes 🍠</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="oats_pasta"> 
+                           <span data-lang="qutionoatspasta"> Oats pasta 🍝</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="brown_rice" > 
+                           <span data-lang="qutionbrownrice"> Brown rice</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="rice_cakes" > 
+                           <span data-lang="qutionricecakes"> Rice cakes</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="carbs_type" value="tortilla" > 
+                            <span data-lang="qutiontortilla">Tortilla bread</span>
+                        </label>
+
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================================== NEW 2=================== -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question6"> Choose your favorite vegetable type</h2>
+                    <h3 class="fs-subtitle" data-lang="questionveggies">Veggies:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="salad"> 
+                           <span  data-lang="question_salad"> Salad 🥗</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="cucumber"> 
+                           <span  data-lang="question_cucumber"> Cucumber 🥒</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="spinach"> 
+                           <span  data-lang="question_spinach"> Spinach</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="mushroom"> 
+                           <span  data-lang="question_mushroom"> Mushroom 🍄</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="green_beans"> 
+                           <span  data-lang="question_greenbeans"> Green beans</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="broccoli"> 
+                           <span  data-lang="question_broccoli"> Broccoli 🥦</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="onion" > 
+                            <span data-lang="question_onion">Onion 🧅</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="zucchini" > 
+                          <span data-lang="question_zucchini">  Zucchini</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="veggies_type" value="green_pepper"> 
+                           <span  data-lang="question_greenpepper"> Green pepper 🫑</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- =================New3 ==================== -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question7"> Choose your favorite type of Fats (Nuts):</h2>
+                    <h3 class="fs-subtitle" data-lang="questionnuts">Fats (Nuts):</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="nuts_type" value="peanut"> 
+                            <span  data-lang="question_peanut">Peanut 🥜</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="nuts_type" value="peanut_butter"> 
+                           <span  data-lang="question_peanutbutter"> Peanut butter</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="nuts_type" value="almonds"> 
+                           <span  data-lang="question_almonds"> Almonds</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="nuts_type" value="cashews"> 
+                           <span  data-lang="question_cashews"> Cashews</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===========================NEW4=========================== -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question8"> Choose your favorite types of fruits:</h2>
+                    <h3 class="fs-subtitle" data-lang="questionfruits">Fruits:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="strawberry"> 
+                           <span data-lang="question_strawberry"> Strawberry 🍓</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="cantaloupe"> 
+                          <span data-lang="question_cantaloupe">  Cantaloupe 🍈</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="watermelon"> 
+                          <span  data-lang="question_watermelon">  Watermelon 🍉</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="pineapple"> 
+                          <span  data-lang="question_pineapple">  Pineapple 🍍</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="kiwi"> 
+                           <span data-lang="question_kiwi"> Kiwi 🥝</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="banana"> 
+                          <span data-lang="question_banana">  Banana 🍌</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="peach"> 
+                          <span  data-lang="question_peach">  Peach 🍑</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="pomegranate" > 
+                           <span data-lang="question_pomegranate"> Pomegranate</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="fruits_type" value="green_apple"> 
+                           <span data-lang="question_greenapple"> Green apple 🍏</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===========================NEW5=========================== -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question9">How many meals do you need in a day?</h2>
+                    <h3 class="fs-subtitle" data-lang="questionmeals">Meals:</h3>
+                    <div class="checkbox-container">
+                        <label>
+            <input class="checkboxo" type="radio" name="meals_type" value="4" data-lang="question_4meals"> 
+            4
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="meals_type" value="5" data-lang="question_5meals"> 
+            5
+        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 6 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question10"> Do you want the 3 meals in the middle of your day to have the same type of protein, carbs, and vegetables, or would you prefer to vary them? Keep in mind that we can change them every 10-14 days during your Check-ins! 🥘</h2>
+                    <h3 class="fs-subtitle" data-lang="questionvariation">Meal Variation:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                                <input class="checkboxo" type="radio" name="meal_variation" value="yes" > 
+                                <span data-lang="question_yes">Yes, I want to vary them</span>
+                            </label>
+                        <label>
+                                <input class="checkboxo" type="radio" name="meal_variation" value="no"> 
+                                <span data-lang="question_no">No, I don't want to vary them</span>
+                            </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 7 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question11"> How many days a week can you train? 🏋️‍♀️</h2>
+                    <h3 class="fs-subtitle" data-lang="questiontrainingdays">Training Days:</h3>
+                    <div class="checkbox-container">
+                        <label>
+            <input class="checkboxo" type="radio" name="training_days" value="3" data-lang="question_3days"> 
+            3
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="training_days" value="4" data-lang="question_4days"> 
+            4
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="training_days" value="5" data-lang="question_5days"> 
+            5
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="training_days" value="6" data-lang="question_6days"> 
+            6
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="training_days" value="5_or_6"> 
+           <span  data-lang="question_5or6days"> 5 or 6 (recommended for faster results)</span>
+        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 8 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question12">12- Do you have a food scale?</h2>
+                    <h3 class="fs-subtitle" data-lang="questionfoodscale">Having a food scale is very important, we can't work without it to achieve the best results possible! 🙌🏻</h3>
+                    <div class="checkbox-container">
+                        <label>
+            <input class="checkboxo" type="radio" name="food_scale" value="yes"> 
+          <span data-lang="question_yes">  Yes</span>
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="food_scale" value="no"> 
+           <span data-lang="question_no"> No</span>
+        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 9 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question13">13- What is your weakest muscle group?</h2>
+                    <h3 class="fs-subtitle" data-lang="questionweakmuscle">Weak Muscle Group:</h3>
+                    <div class="checkbox-container">
+                        <label>
+            <input class="checkboxo" type="radio" name="weak_muscle" value="chest"> 
+          <span  data-lang="question_chest">  Chest</span>
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="weak_muscle" value="back"> 
+           <span  data-lang="question_back"> Back</span>
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="weak_muscle" value="shoulders"> 
+            <span  data-lang="question_shoulders">Shoulders</span>
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="weak_muscle" value="arms" > 
+            <span data-lang="question_arms">Arms</span>
+        </label>
+                        <label>
+            <input class="checkboxo" type="radio" name="weak_muscle" value="legs"> 
+            <span  data-lang="question_legs">Legs</span>
+        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 10 ======================= -->
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question14">14- What is your level at the gym?</h2>
+                    <h3 class="fs-subtitle" data-lang="questiongymlevel">Gym Level:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="radio" name="gym_level" value="beginner"> 
+                           <span data-lang="question_beginner"> Beginner</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="gym_level" value="moderate"> 
+                           <span data-lang="question_moderate"> Moderate</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="gym_level" value="advanced"> 
+                            <span  data-lang="question_advanced">Advanced</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================================== New 11 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question15">Do you have any allergies to certain foods?</h2>
+                    <h3 class="fs-subtitle" data-lang="questionallergy">Food Allergy:</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="food_allergy" value="yes"> 
+                          <span data-lang="question_yes2">  Yes, I have allergies</span>
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="checkbox" name="food_allergy" value="no"> 
+                         <span data-lang="question_no2">   No, I'm fine</span>
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================================== New 12 ======================= -->
+                <!-- ===================================== New 12 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution16">Question 16</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionothersports">Do you play other sports?</h3>
+                    <!-- قم بإضافة ملصق للحقل -->
+                    <div class="f">
+                        <div class="fy">
+                            <label style="color: white;" for="sports-yes" data-lang="qutionyes">Yes</label>
+                            <input class="checkboxo" type="radio" name="CAT_Custom_6" id="sports-yes" width="15px" value="Yes" required>
+                            <!-- تعيين القيمة "نعم" للإجابة الإيجابية -->
+                        </div>
+
+                        <div class="fn">
+                            <label style="color: white;" for="sports-no" data-lang="qutionno">No</label>
+                            <input class="checkboxo" type="radio" name="CAT_Custom_6" id="sports-no" value="No" required>
+                            <!-- تعيين القيمة "لا" للإجابة السلبية -->
+                        </div>
+
+
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <!-- ===================================== New 13 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question17">16- Do you have any current injuries or chronic diseases?</h2>
+                    <h3 class="fs-subtitle" data-lang="questioninjuries">Please describe any injuries or chronic diseases:</h3>
+                    <input type="text" name="injuries_diseases" id="injuries_diseases" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="Describe your injuries or chronic diseases" />
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================================== New 14 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question18">11- What is your daily routine like? What time do you wake up, go to sleep, and what are your work hours?</h2>
+                    <h3 class="fs-subtitle" data-lang="questionroutine">Describe your daily routine:</h3>
+                    <input type="text" name="daily_routine" id="daily_routine" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="Describe your wake up time, sleep time, and work hours" />
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+                <!-- ===================================== New 15 ======================= -->
+                <fieldset>
+                    <h2 class="fs-title" data-lang="question19">8- Do you have any dietary supplements? 💊</h2>
+                    <h3 class="fs-subtitle" data-lang="questionsupplements">If you have any, please list the supplements you have.</h3>
+                    <input type="text" name="supplements" id="supplements" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="List any supplements you have" />
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" id="sendToWhatsApp" class="submit action-button butt" value="Send" />
+                </fieldset>
+    </section>
+
+    </form>
+    </div>
+    <!--========== whatsapp ==========-->
+
+
+    <!-- <a href="https://api.whatsapp.com/send?phone=+201004056576" class="whatsapp">
+    <i class="fa-brands fa-whatsapp wahtsapp-icon"></i>
+        </a> -->
+    <script>
+        // Function to gather form data and send it to WhatsApp
+        function sendToWhatsApp() {
+            // Get all the selected answers
+            let formData = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                height: document.getElementById('CAT_Custom_2').value,
+                weight: document.getElementById('range-weight').value,
+                gender: document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '',
+                protein: Array.from(document.querySelectorAll('input[name="protein_type"]:checked')).map(input => input.value),
+                carbs: Array.from(document.querySelectorAll('input[name="carbs_type"]:checked')).map(input => input.value),
+                veggies: Array.from(document.querySelectorAll('input[name="veggies_type"]:checked')).map(input => input.value),
+                nuts: Array.from(document.querySelectorAll('input[name="nuts_type"]:checked')).map(input => input.value),
+                fruits: Array.from(document.querySelectorAll('input[name="fruits_type"]:checked')).map(input => input.value),
+                meals: document.querySelector('input[name="meals_type"]:checked') ? document.querySelector('input[name="meals_type"]:checked').value : '',
+                mealVariation: document.querySelector('input[name="meal_variation"]:checked') ? document.querySelector('input[name="meal_variation"]:checked').value : '',
+                trainingDays: document.querySelector('input[name="training_days"]:checked') ? document.querySelector('input[name="training_days"]:checked').value : '',
+                foodScale: document.querySelector('input[name="food_scale"]:checked') ? document.querySelector('input[name="food_scale"]:checked').value : '',
+                weakMuscle: document.querySelector('input[name="weak_muscle"]:checked') ? document.querySelector('input[name="weak_muscle"]:checked').value : '',
+                gymLevel: document.querySelector('input[name="gym_level"]:checked') ? document.querySelector('input[name="gym_level"]:checked').value : '',
+                foodAllergy: Array.from(document.querySelectorAll('input[name="food_allergy"]:checked')).map(input => input.value),
+                otherSports: document.querySelector('input[name="CAT_Custom_6"]:checked') ? document.querySelector('input[name="CAT_Custom_6"]:checked').value : '',
+                injuriesDiseases: document.getElementById('injuries_diseases').value,
+                dailyRoutine: document.getElementById('daily_routine').value,
+                supplements: document.getElementById('supplements').value
+            };
+
+            // Construct the message for WhatsApp
+            let message = `Form Data: 
+Name: ${formData.name}
+Age: ${formData.age}
+Height: ${formData.height}
+Weight: ${formData.weight}
+Gender: ${formData.gender}
+Protein: ${formData.protein.join(", ")}
+Carbs: ${formData.carbs.join(", ")}
+Veggies: ${formData.veggies.join(", ")}
+Nuts: ${formData.nuts.join(", ")}
+Fruits: ${formData.fruits.join(", ")}
+Meals per Day: ${formData.meals}
+Meal Variation: ${formData.mealVariation}
+Training Days per Week: ${formData.trainingDays}
+Food Scale: ${formData.foodScale}
+Weak Muscle Group: ${formData.weakMuscle}
+Gym Level: ${formData.gymLevel}
+Food Allergy: ${formData.foodAllergy.join(", ")}
+Other Sports: ${formData.otherSports}
+Injuries/Chronic Diseases: ${formData.injuriesDiseases}
+Daily Routine: ${formData.dailyRoutine}
+Supplements: ${formData.supplements}`;
+
+            // Encode message for URL
+            let encodedMessage = encodeURIComponent(message);
+
+            // Send the message to WhatsApp (replace with the correct number)
+            let whatsappURL = `https://wa.me/201208425542?text=${encodedMessage}`;
+
+            // Open WhatsApp link
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Attach the function to the submit button
+        document.querySelector('#sendToWhatsApp').addEventListener('click', sendToWhatsApp);
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+        // احصل على الزرار والقسم الصورة
+        const toggleButton = document.getElementById('toggleButton');
+        const imageSection = document.getElementById('imageSection');
+
+        // قم بإضافة مستمع لنقرة الزرار
+        toggleButton.addEventListener('click', function() {
+            // قم بإخفاء الزرار
+            toggleButton.style.display = 'none';
+            // قم بعرض القسم الصورة
+            imageSection.style.display = 'block';
+        });
+    </script>
+    <script>
+        /*=============== SHOW MENU ===============*/
+        const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+        /*===== MENU SHOW =====*/
+        /* Validate if constant exists */
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        /*===== MENU HIDDEN =====*/
+        /* Validate if constant exists */
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu')
+            })
+        }
+
+        /*=============== REMOVE MENU MOBILE ===============*/
+        const navLink = document.querySelectorAll('.nav__link')
+
+        const linkAction = () => {
+            const navMenu = document.getElementById('nav-menu')
+                // When we click on each nav__link, we remove the show-menu class
+            navMenu.classList.remove('show-menu')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+    </script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/mianform.js' %}"></script>
+    <script src="{% static 'js/language.js' %}"></script>
+    <!-- <script src="js/navform.js"></script> -->
+
+    <!-- jQuery easing plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+</body>
+
+</html>

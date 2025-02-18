@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/logo3.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <!--=============== AOS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--=============== SWIPER CSS ===============-->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Payments</title>
+</head>
+<style>
+    #language-selector {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-weight: bold;
+        background-color: #91919159;
+        border: 1px solid;
+        padding: 3px 9px !important;
+        color: hsl(0deg 0% 100%);
+        /* border: none; */
+        /* border-radius: 1rem; */
+        cursor: pointer;
+        outline: none;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px 15px;
+        width: 76px;
+        text-align: center;
+        direction: ltr;
+        text-align: left;
+    }
+    
+    #language-selector option {
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }
+    
+    #language-selector option[value="en"]::before {
+        content: url('https://flagcdn.com/w40/us.png');
+    }
+    
+    #language-selector option[value="ar"]::before {
+        content: url('https://flagcdn.com/w40/sa.png');
+    }
+    /* تحديد مكان النص للغة العربية فقط */
+    
+    .arabic-font {
+        direction: rtl;
+        text-align: center;
+    }
+    
+    .second-arabic-font {
+        direction: rtl;
+        text-align: right;
+        font-family: 'Cairo', sans-serif;
+    }
+    
+    .se-arab {
+        direction: rtl;
+        text-align: center;
+    }
+</style>
+<title>Youssef Yanni</title>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <!--=============== NAVBAR ===============-->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Youssef Yanni</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link" data-lang="nav1">Home</a></li>
+                    <li><a href="index.html#pricing" class="nav__link" data-lang="nav6">Packages</a></li>
+                    <li><a href="index.html#new" class="nav__link" data-lang="nav7">Transformations</a></li>
+                    <li><a href="book.html" class="nav__link cookingnav" data-lang="nav4">Cooking E-book</a></li>
+                    <li><a href="about.html" class="nav__link" data-lang="nav2">About Us</a></li>
+                    <li><a href="calc.html" class="nav__link calcnav" data-lang="nav5">Calorie calculator</a></li>
+                    <li><select name="language" id="language-selector">
+                    <option value="en" data-flag="https://flagcdn.com/w40/us.png" selected>En</option>
+                    <option value="ar" data-flag="https://flagcdn.com/w40/eg.png">Ar</option>
+                </select></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <div class="containerare">
+            <div class="card__container">
+                <!-- بطاقة InstaPay -->
+                <article class="card__article" data-aos="fade-right">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+                    <img width="220px" src="assets/img/instapaay.png" alt="card image" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title instacared">InstaPay Payment</h2>
+                        <h4 class="stepes" data-lang="instapay2">STEP 1</h4>
+                        <p class="card__description" data-lang="instapay3">Transfer the payment to the following InstaPay number:</p>
+                        <p class="mohemgdan">01208425542</p>
+                        <h4 class="stepes" data-lang="instapay4">STEP 2</h4>
+                        <p class="card__description" data-lang="instapay5">Take a screenshot of the transaction.</p>
+                        <h4 class="stepes" data-lang="instapay6">STEP 3</h4>
+                        <p class="card__description" data-lang="instapay7">Send the screenshot to our WhatsApp number:</p>
+                        <a href="https://wa.me/201208425542" target="_blank" class="whatsapp-button">
+                            <i class="ri-whatsapp-line watsappicona"></i>
+                            <p data-lang="instapay8">Send to Chat</p>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- بطاقة Vodafone Cash -->
+                <article class="card__article card__orange" data-aos="fade-right">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+                    <img src="assets/img/vod1.png" alt="card image" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title vodacarad">Vodafone Cash Payment</h2>
+                        <h4 class="stepes" data-lang="vodafon2">STEP 1</h4>
+                        <p class="card__description" data-lang="vodafon3">Transfer the payment to the following Vodafone Cash number:</p>
+                        <p class="mohemgdan">01023864565</p>
+                        <h4 class="stepes" data-lang="vodafon4">STEP 2</h4>
+                        <p class="card__description" data-lang="vodafon5">Take a screenshot of the transaction.</p>
+                        <h4 class="stepes" data-lang="vodafon6">STEP 3</h4>
+                        <p class="card__description" data-lang="vodafon7">Send the screenshot to our WhatsApp number:</p>
+                        <a href="https://wa.me/201208425542" target="_blank" class="whatsapp-button">
+                            <i class="ri-whatsapp-line watsappicona"></i>
+                            <p data-lang="instapay8">Send to Chat</p>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- بطاقة Bank Misr -->
+                <article class="card__article" data-aos="fade-right">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+                    <img width="220px" src="assets/img/bankmasr.png" alt="card image" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title vodacarad">Bank Misr Payment</h2>
+                        <h4 class="stepes" data-lang="vodafon2">STEP 1</h4>
+                        <p class="card__description" data-lang="bankmisrsend">Transfer the payment to the following Bank Misr account:</p>
+                        <p class="mohemgdan">1590333000044061</p>
+                        <h4 class="stepes " data-lang="vodafon4">STEP 2</h4>
+                        <p class="card__description" data-lang="vodafon5">Take a screenshot of the transaction.</p>
+                        <h4 class="stepes" data-lang="vodafon6">STEP 3</h4>
+                        <p class="card__description" data-lang="vodafon7">Send the screenshot to our WhatsApp number:</p>
+                        <a href="https://wa.me/201208425542" target="_blank" class="whatsapp-button">
+                            <i class="ri-whatsapp-line watsappicona"></i>
+                            <p>Send to Chat</p>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- بطاقة Western Union -->
+                <article class="card__article card__orange" data-aos="fade-right">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+                    <img width="220px" src="assets/img/Western Union.png" alt="card image" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title westirns">Western Union Payment</h2>
+                        <h4 class="stepes" data-lang="vodafon2">STEP 1</h4>
+                        <p class="card__description" data-lang="westirnsendpayments">Send payment to the following Western Union account:</p>
+                        <p class="mohemgdan">Joseph Yanni Wadie</p>
+                        <h4 class="stepes" data-lang="vodafon4">STEP 2</h4>
+                        <p class="card__description" data-lang="vodafon5">Take a screenshot of the transaction.</p>
+                        <h4 class="stepes" data-lang="vodafon6">STEP 3</h4>
+                        <p class="card__description" data-lang="vodafon7">Send the screenshot to our WhatsApp number:</p>
+                        <a href="https://wa.me/201208425542" target="_blank" class="whatsapp-button">
+                            <i class="ri-whatsapp-line watsappicona"></i>
+                            <p>Send to Chat</p>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <a style="width: 50%;" href="index.html" class="nav__logo"><img src="assets/img/logo3.png" alt=""></a>
+            <div class="footer__contect grid">
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="index.html" class="footer__lik" data-lang="footerhome">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about" class="footer__lik" data-lang="footerabout">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#pricing" class="footer__lik" data-lang="footerpricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="calc.html" class="footer__lik" data-lang="footercalc">Calc</a>
+                    </li>
+                    <li>
+                        <a href="book.html" class="footer__lik" data-lang="nav4">Book</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/youssef.yanni1?mibextid=wwXIfr&rdid=Uo0ES4dwie6CsFfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F179kNgQV6y%2F%3Fmibextid%3DwwXIfr" class="footer__social-link facebook">
+                    <i class="ri-facebook-circle-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/yannileads/?igsh=azFmb2g4azdvbWRm" class="footer__social-link instagram">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://www.tiktok.com/@youssefyanni_?_t=8sNqTMeBp6W&_r=1" class="footer__social-link tiktok">
+                    <i class="ri-tiktok-fill"></i>
+                </a>
+            </div>
+        </div>
+        <span class="footer__copy">
+            &#169; All Rights Reserved By <a style="color: gold; font-size: 1rem; font-weight: 600;" href="https://wa.me/01005718132" class="mmoo" target="_blank">Moalramly</a>
+        </span>
+
+    </footer>
+
+    <!--========== whatsapp ==========-->
+
+    <a href="https://wa.me/201208425542" class="whatsapp">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-double-line"></i>
+        <!-- <i class="fa-solid fa-circle-arrow-up"></i> -->
+    </a>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500
+        });
+    </script>
+    <script src="assets/js/language2.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        })
+    </script>
+    <script>
+        /*=============== SHOW SCROLL UP ===============*/
+        const scrollUp = () => {
+            const scrollUp = document.getElementById('scroll-up')
+                // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+            this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') :
+                scrollUp.classList.remove('show-scroll')
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://app.embed.im/snow.js" defer></script>
+    <!--=============== MAIN JS ===============-->
+    <!-- <script src="assets/js/main.js"></script> -->
+
+</body>
+
+</html>
+
+</html>
