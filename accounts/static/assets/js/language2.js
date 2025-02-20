@@ -74,7 +74,7 @@ let lang = {
 
         discountebook: "خصم يصل إلى 50% على كتابنا الإلكتروني الحصري",
         discountebookdescription: "اكتشف وصفات سهلة ومنخفضة السعرات الحرارية تساعدك على الحفاظ على لياقتك والاستمتاع بوجبات لذيذة في نفس الوقت. مع أكثر من 50 وصفة، هذا الكتاب الإلكتروني هو رفيقك المثالي لأسلوب حياة صحي ورحلة إدارة الوزن. لا تفوت هذه العرض المحدود",
-        getyourcopy: "احصل على نسختك",
+        getyourcopy: "اشتري الان",
 
         calc1: "احسب سعراتك الحرارية",
         calc3: "اكتشف كمية السعرات الحرارية المثالية لجسمك لتحقيق أهدافك.",
@@ -231,7 +231,7 @@ let lang = {
         qutionoatspasta: "مكرونة شوفان 🍝",
         qutionbrownrice: "أرز بني",
         qutionricecakes: "كيك الأرز",
-        qutiontortilla: "خبز تورتيلا",
+        qutiontortilla: "خبز تورتيلا🥯",
         qutionother: "أخرى",
 
         question6: "السؤال 6",
@@ -239,7 +239,7 @@ let lang = {
         question_salad: "سلطة 🥗",
         question_cucumber: "خيار 🥒",
         question_spinach: "سبانخ",
-        question_mushroom: "فطر 🍄",
+        question_mushroom: "ماشروم🍄",
         question_greenbeans: "فاصوليا خضراء",
         question_broccoli: "بروكلي 🥦",
         question_onion: "بصل 🧅",
@@ -249,7 +249,7 @@ let lang = {
         question7: "السؤال 7",
         questionnuts: "اختر نوع الدهون المفضل لديك (المكسرات):",
         question_peanut: "فول سوداني 🥜",
-        question_peanutbutter: "زبدة الفول السوداني",
+        question_peanutbutter: "زبدة فول السوداني",
         question_almonds: "لوز",
         question_cashews: "كاجو",
 
@@ -269,12 +269,12 @@ let lang = {
         questionmeals: "كم وجبة تحتاج في اليوم؟",
 
         question10: "السؤال 10",
-        questionvariation: "هل ترغب أن تكون الوجبات الثلاث في منتصف اليوم بنفس نوع البروتين والكربوهيدرات والخضار، أم تفضل التنويع؟ مع العلم أنه يمكننا تغييرها كل 10-14 يومًا خلال الفحوصات! 🥘",
+        questionvariation: "عاوز ال ٣ وجبات اللي في نص يومك بنفس نوع البروتين، الكارب والخضار ولا حابب ننوع فيهم؟ مع العلم اننا نقدر نبدل فيهم براحتنا كل  ( ١٠ - ١٤ ) يوم في ال Check-ins بتاعتك! 🥘",
         question_yes: "نعم، أرغب في التنويع",
         question_no: "لا، لا أرغب في التنويع",
 
         question11: "السؤال 11",
-        questiontrainingdays: "كم يومًا في الأسبوع يمكنك التدريب؟ 🏋️‍♀️",
+        questiontrainingdays: "هتقدر تتمرن كام يوم في الاسبوع؟",
         question_5or6days: "5 أو 6 (موصى به للحصول على نتائج أسرع)",
 
         question12: "السؤال 12",
@@ -283,7 +283,7 @@ let lang = {
         question_no: "لا",
 
         question13: "السؤال 13",
-        questionweakmuscle: "ما هي أضعف مجموعة عضلية لديك؟",
+        questionweakmuscle: "ايه هي العضله الضعيفه بالنسبالك؟",
         question_chest: "صدر",
         question_back: "ظهر",
         question_shoulders: "أكتاف",
@@ -291,33 +291,63 @@ let lang = {
         question_legs: "أرجل",
 
         question14: "السؤال 14",
-        questiongymlevel: "ما هو مستواك في الجيم؟",
+        questiongymlevel: "ايه هو مستواك في الچيم ؟",
         question_beginner: "مبتدئ",
         question_moderate: "متوسط",
         question_advanced: "متقدم",
 
         question15: "السؤال 15",
-        questionallergy: "هل لديك أي حساسية من بعض الأطعمة؟",
+        questionallergy: "عندك اي حساسيه من اكل معين؟",
         question_yes2: "نعم، لدي حساسية",
         question_no2: "لا، أنا بخير",
 
         qution16: "السؤال 16",
-        qutionothersports: "هل تمارس رياضات أخرى؟",
+        qutionothersports: "هل تمارس أي رياضات أخرى؟",
         qutionyes: "نعم",
         qutionno: "لا",
 
         question17: "السؤال 17",
-        questioninjuries: "هل لديك أي إصابات حالية أو أمراض مزمنة؟",
+        questioninjuries: "عندك اي اصابات حاليه او امراض مزمنه؟",
 
-        question18: "السؤال 18",
-        questionroutine: "كيف هي روتينك اليومي؟ ما الوقت الذي تستيقظ فيه، وتنام فيه، وما هي ساعات عملك؟",
 
-        question19: "السؤال 19",
-        questionsupplements: "هل لديك أي مكملات غذائية؟ 💊",
+        question19: "السؤال 18",
+        questionsupplements: "معاك اي مكملات غذائية ؟",
         buttonformstart: "ابدأ",
         qutionothersports: "ألعاب رياضية أخرى",
         westirnsendpayments: "أرسل الدفع إلى حساب Western Union التالي:",
         bankmisrsend: " قم بتحويل الدفع إلى حساب بنك مصر التالي",
+        question20: "ايه الميزانيه اللي حابب انك تدفعها في النظام الغذائي بتاعك ؟",
+        questionbudget: "الميزانية:",
+        question_lowbudget: "منخفضة",
+        question_mediumbudget: "متوسطة",
+        question_highbudget: "مرتفعة",
+        question21: "هدفك ايه خلال فترة المتابعه؟",
+        questiongoal: "الهدف:",
+        question_musclefat: "زيادة كتلة عضلية مع تقليل نسبة الدهون",
+        question_fatloss: "تقليل نسبة الدهون فقط",
+        question_musclegain: "زيادة الكتلة العضلية فقط",
+        question22: "يومك بيكون ماشي ازاي",
+        questionroutine2: "بتصحي و تنام امتي و مواعيد شغلك ايه ؟",
+        question23: "هل لديك حساسية من أي طعام معين؟",
+        questionallergy2: "حساسية الطعام:",
+        question_yes3: "نعم، لدي حساسية",
+        question_no3: "لا، أنا بخير",
+
+        question201: "السؤال 19",
+        question211: "السؤال 20",
+        question221: "السؤال 21",
+        question231: "السؤال 22",
+        instructions_title: "تعليمات العميل",
+        instructions_note: "يرجى إرسال ما يلي على واتساب، وليس هنا:",
+        instructions_photos: "صور واضحة لجسمك على الريق من 4 زوايا:",
+        photo_face: "الوجه (من الأمام)",
+        photo_right: "الجانب الأيمن",
+        photo_left: "الجانب الأيسر",
+        photo_back: "الظهر",
+        instructions_helper: "يُفضّل أن يلتقط شخص آخر الصور لك بدلاً من التقاطها بنفسك للحصول على أفضل جودة.",
+        instructions_supplements: "هل لديك أي مكملات غذائية؟ 💊",
+        instructions_supplements_photos: "إذا كان لديك مكملات، يُرجى إرسال صور لها."
+
 
 
     },
@@ -340,7 +370,7 @@ let lang = {
         home1: "DISCOUNT UP TO 50%",
         transformation: "Your results, my passion.",
         discountebookdescription: "Discover easy, low-calorie recipes that help you stay fit and enjoy delicious meals at the same time. With over 50 recipes included, this e-book is your perfect companion for a healthy lifestyle and weight management journey. Don’t miss this limited-time offer",
-        offerdownload: "Download The Free Trial",
+        offerdownload: "Download Free Trial",
         youssefyanni: "Youssef Yanni",
         home3p3: "Achieve Your Fitness Goals & Transform",
         home3p2: " Your Lifestyle",
@@ -366,7 +396,8 @@ let lang = {
         about1description: "Meet Youssef, an experienced online fitness coach and certified nutritionist. With a passion for helping clients achieve their health goals, Youssef combines personalized training and expert guidance to transform lives.",
         learnmore: "Learn More",
 
-        packages: "Exclusive Now",
+        packages: "Select Your Boost",
+
         ignitepackage: "Prime Package ",
         packagebutton: "SUBSCRIBE NOW",
         per3month: "PER / 3 MONTHS",
@@ -400,8 +431,9 @@ let lang = {
 
 
 
-        discountebook: " Up To 50% Off On Our Exclusive E-Book",
-        getyourcopy: "Get Your Copy",
+        discountebook: " Up To 50% OFF On Our Exclusive E-Book",
+        getyourcopy: "Buy Now",
+
 
         calc1: "Calculate Your Calories ",
         calc3: "Discover the perfect calorie intake for your body to reach your goals.",
@@ -533,7 +565,7 @@ let lang = {
         qutionoatspasta: "Oats pasta 🍝",
         qutionbrownrice: "Brown rice",
         qutionricecakes: " Rice cakes",
-        qutiontortilla: "  Tortilla bread",
+        qutiontortilla: "  Tortilla bread 🥯",
         qutionother: "  Other",
 
         question6: "Question 6",
@@ -551,7 +583,7 @@ let lang = {
         question7: "Question 7",
         questionnuts: " Choose your favorite type of Fats (Nuts):",
         question_peanut: "Peanut butter 🧈",
-        question_peanutbutter: "Peanuts 🥜",
+        question_peanutbutter: "Peanuts  🥜",
         question_almonds: "Almonds",
         question_cashews: "  Cashews",
 
@@ -612,12 +644,28 @@ let lang = {
         question17: "Question 17",
         questioninjuries: "Do you have any current injuries or chronic diseases?",
 
-        question18: "Question 18",
-        questionroutine: " What is your daily routine like? What time do you wake up, go to sleep, and what are your work hours?",
 
-        question19: "Question 19",
+        question19: "Question 18",
         questionsupplements: " Do you have any dietary supplements? 💊",
         buttonformstart: "Get Start",
+
+
+        question20: "What is your budget for the diet plan?",
+        questionbudget: "Budget:",
+        question_lowbudget: "Low",
+        question_mediumbudget: "Medium",
+        question_highbudget: "High",
+        question21: "What is your goal during the follow-up period?",
+        questiongoal: "Goal:",
+        question_musclefat: "Muscle gain with fat loss",
+        question_fatloss: "Fat loss only",
+        question_musclegain: "Muscle gain only",
+        question22: "How is your daily routine?",
+        questionroutine2: "Please describe your wake-up time, sleep time, and work hours:",
+        question23: "Do you have any food allergies?",
+        questionallergy2: "Food Allergy:",
+        question_yes3: "Yes, I have allergies",
+        question_no3: "No, I'm fine",
 
         buynowpricing: "Buy Now",
         nav10: "download",
@@ -625,20 +673,21 @@ let lang = {
         westirnsendpayments: "Send payment to the following Western Union account:",
         vodafon7: "Send the screenshot to our WhatsApp number:",
         nav11: "Spin To Win",
+        question201: "Question 19",
+        question211: "Question 20",
+        question221: "Question 21",
+        question231: "Question 22",
+        instructions_title: "Client Instructions",
+        instructions_note: "Please send the following on WhatsApp, not here:",
+        instructions_photos: "Clear photos of your body in a fasting state from 4 angles:",
+        photo_face: "Front (Face)",
+        photo_right: "Right Side",
+        photo_left: "Left Side",
+        photo_back: "Back",
+        instructions_helper: "It is recommended that someone else take the photos for better quality instead of taking them yourself.",
+        instructions_supplements: "Do you have any supplements? 💊",
+        instructions_supplements_photos: "If you have any, please send pictures of them.",
 
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
         formqution5: "",
         formqution5: "",
         formqution5: "",
@@ -687,7 +736,7 @@ function updateLanguage() {
     });
 
     // تحديث اتجاه النص في الجسم بناءً على اللغة
-    document.body.style.direction = language === 'ar' ? 'ltr' : 'ltr';
+    document.body.style.direction = language === 'ar' ? 'rtl' : 'ltr';
     document.body.style.textAlign = language === 'ar' ? 'right' : 'left';
 
     // أقسام ذات اتجاه معين تبقى كما هي
