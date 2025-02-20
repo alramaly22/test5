@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from django.http import JsonResponse, HttpResponseRedirect
+from django.shortcuts import render
+from django.http import JsonResponse
 import json
 
 def index(request):
@@ -32,10 +32,10 @@ def paid_webhook(request):
             data = json.loads(request.body)
             print("✅ Payment Data Received:", data)
 
-            # تأكد أن الدفع ناجح من بيانات البوابة
-            payment_status = data.get("status")  # عدّل المفتاح حسب استجابة البوابة
-            if payment_status == "paid":  # تأكد أن الحالة تعني الدفع ناجح
-                return HttpResponseRedirect('/form/')  # توجيه المستخدم إلى صفحة الفورم بعد الدفع
+            # تحقق من حالة الدفع
+            payment_status = data.get("status")  # تأكد من المفتاح الصحيح في استجابة بوابة الدفع
+            if payment_status == "paid":
+                return JsonResponse({"redirect": "/form/"}, status=200)  # إرسال أمر التوجيه
                 
         except json.JSONDecodeError:
             return JsonResponse({"error": "Invalid JSON"}, status=400)
