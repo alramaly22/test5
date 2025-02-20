@@ -126,7 +126,7 @@
 
 
 
-<h1>Welcom To Team Yanni</h1>
+{% comment %} <h1>Welcom To Team Yanni</h1> {% endcomment %}
   </br>
     <button class="button" id="toggleButton" data-lang="buttonformstart">Get Start</button>
     <section class="wrapper hidden" id="imageSection">
@@ -613,23 +613,123 @@
                     <input type="button" name="next" class="next action-button butt" value="Next" />
                 </fieldset>
                 <!-- ===================================== New 14 ======================= -->
-                <fieldset>
-                    <h2 class="fs-title" data-lang="question18">11- What is your daily routine like? What time do you wake up, go to sleep, and what are your work hours?</h2>
-                    <h3 class="fs-subtitle" data-lang="questionroutine">Describe your daily routine:</h3>
-                    <input type="text" name="daily_routine" id="daily_routine" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="Describe your wake up time, sleep time, and work hours" />
-
-                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
-                    <input type="button" name="next" class="next action-button butt" value="Next" />
-                </fieldset>
+                
                 <!-- ===================================== New 15 ======================= -->
                 <fieldset>
+                    
                     <h2 class="fs-title" data-lang="question19">8- Do you have any dietary supplements? 💊</h2>
                     <h3 class="fs-subtitle" data-lang="questionsupplements">If you have any, please list the supplements you have.</h3>
                     <input type="text" name="supplements" id="supplements" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="List any supplements you have" />
 
                     <input type="button" name="previous" class="previous action-button butt" value="Previous" />
-                    <input type="button" id="sendToWhatsApp" class="submit action-button butt" value="Send" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
                 </fieldset>
+
+                <!-- ===================================== New 16 ======================= -->
+<fieldset>
+    <h2 class="fs-title" data-lang="question201"></h2>
+
+    <h2 class="fs-title" data-lang="question20">What is your budget for the diet plan?</h2>
+    <h3 class="fs-subtitle" data-lang="questionbudget">Budget:</h3>
+    <div class="checkbox-container">
+        <label>
+            <input class="checkboxo" type="radio" name="diet_budget" value="low"> 
+            <span data-lang="question_lowbudget">Low</span>
+        </label>
+        <label>
+            <input class="checkboxo" type="radio" name="diet_budget" value="medium"> 
+            <span data-lang="question_mediumbudget">Medium</span>
+        </label>
+        <label>
+            <input class="checkboxo" type="radio" name="diet_budget" value="high"> 
+            <span data-lang="question_highbudget">High</span>
+        </label>
+    </div>
+
+    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+    <input type="button" name="next" class="next action-button butt" value="Next" />
+</fieldset>
+
+<!-- ===================================== New 17 ======================= -->
+<fieldset>
+    <h2 class="fs-title" data-lang="question211">8- Do you have any dietary supplements? 💊</h2>
+
+    <h2 class="fs-title" data-lang="question21">What is your goal during the follow-up period?</h2>
+    <h3 class="fs-subtitle" data-lang="questiongoal">Goal:</h3>
+    <div class="checkbox-container">
+        <label>
+            <input class="checkboxo" type="radio" name="goal" value="muscle_gain_fat_loss"> 
+            <span data-lang="question_musclefat">Muscle gain with fat loss</span>
+        </label>
+        <label>
+            <input class="checkboxo" type="radio" name="goal" value="fat_loss"> 
+            <span data-lang="question_fatloss">Fat loss only</span>
+        </label>
+        <label>
+            <input class="checkboxo" type="radio" name="goal" value="muscle_gain"> 
+            <span data-lang="question_musclegain">Muscle gain only</span>
+        </label>
+    </div>
+
+    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+    <input type="button" name="next" class="next action-button butt" value="Next" />
+</fieldset>
+
+<!-- ===================================== New 18 ======================= -->
+<fieldset>
+    <h2 class="fs-title" data-lang="question221">8- Do you have any dietary supplements? 💊</h2>
+
+    <h2 class="fs-title" data-lang="question22">How is your daily routine?</h2>
+    <h3 class="fs-subtitle" data-lang="questionroutine2">Please describe your wake-up time, sleep time, and work hours:</h3>
+    <input type="text" name="daily_routine2" id="daily_routine2" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" placeholder="Describe your daily routine" />
+
+    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+    <input type="button" name="next" class="next action-button butt" value="Next" />
+</fieldset>
+
+<!-- ===================================== New 19 ======================= -->
+<fieldset>
+    <h2 class="fs-title" data-lang="question231">8- Do you have any dietary supplements? 💊</h2>
+
+    <h2 class="fs-title" data-lang="question23">Do you have any food allergies?</h2>
+    <h3 class="fs-subtitle" data-lang="questionallergy2">Food Allergy:</h3>
+    <div class="checkbox-container">
+        <label>
+            <input class="checkboxo" type="radio" name="food_allergy2" value="yes"> 
+            <span data-lang="question_yes3">Yes, I have allergies</span>
+        </label>
+        <label>
+            <input class="checkboxo" type="radio" name="food_allergy2" value="no"> 
+            <span data-lang="question_no3">No, I'm fine</span>
+        </label>
+    </div>
+
+    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+    <input type="button" name="next" class="next action-button butt" value="Next" />
+</fieldset>
+<fieldset class="client-instructions">
+    <legend data-lang="instructions_title">Client Instructions</legend>
+    <ol>
+        <li class="mainnn" data-lang="instructions_note">Please send the following on WhatsApp, not here:</li>
+        <ul>
+            <li class="notmainnn" data-lang="instructions_photos">Clear photos of your body in a fasting state from 4 angles:</li>
+            <ul>
+                <li class="notmainnn" data-lang="photo_face">Front (Face)</li>
+                <li class="notmainnn" data-lang="photo_right">Right Side</li>
+                <li class="notmainnn" data-lang="photo_left">Left Side</li>
+                <li class="notmainnn" data-lang="photo_back">Back</li>
+            </ul>
+        </ul>
+        <li class="mainnn" data-lang="instructions_helper">It is recommended that someone else take the photos for better quality instead of taking them yourself.</li>
+        <li class="mainnn" data-lang="instructions_supplements">Do you have any supplements? 💊</li>
+        <ul>
+            <li class="notmainnn" data-lang="instructions_supplements_photos">If you have any, please send pictures of them.</li>
+        </ul>
+    </ol>
+
+    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+    <input type="button" id="sendToWhatsApp" class="submit action-button butt" value="Send" />
+</fieldset>
     </section>
 
     </form>
@@ -640,72 +740,81 @@
     <!-- <a href="https://api.whatsapp.com/send?phone=+201004056576" class="whatsapp">
     <i class="fa-brands fa-whatsapp wahtsapp-icon"></i>
         </a> -->
-    <script>
-        // Function to gather form data and send it to WhatsApp
-        function sendToWhatsApp() {
-            // Get all the selected answers
-            let formData = {
-                name: document.getElementById('name').value,
-                age: document.getElementById('age').value,
-                height: document.getElementById('CAT_Custom_2').value,
-                weight: document.getElementById('range-weight').value,
-                gender: document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '',
-                protein: Array.from(document.querySelectorAll('input[name="protein_type"]:checked')).map(input => input.value),
-                carbs: Array.from(document.querySelectorAll('input[name="carbs_type"]:checked')).map(input => input.value),
-                veggies: Array.from(document.querySelectorAll('input[name="veggies_type"]:checked')).map(input => input.value),
-                nuts: Array.from(document.querySelectorAll('input[name="nuts_type"]:checked')).map(input => input.value),
-                fruits: Array.from(document.querySelectorAll('input[name="fruits_type"]:checked')).map(input => input.value),
-                meals: document.querySelector('input[name="meals_type"]:checked') ? document.querySelector('input[name="meals_type"]:checked').value : '',
-                mealVariation: document.querySelector('input[name="meal_variation"]:checked') ? document.querySelector('input[name="meal_variation"]:checked').value : '',
-                trainingDays: document.querySelector('input[name="training_days"]:checked') ? document.querySelector('input[name="training_days"]:checked').value : '',
-                foodScale: document.querySelector('input[name="food_scale"]:checked') ? document.querySelector('input[name="food_scale"]:checked').value : '',
-                weakMuscle: document.querySelector('input[name="weak_muscle"]:checked') ? document.querySelector('input[name="weak_muscle"]:checked').value : '',
-                gymLevel: document.querySelector('input[name="gym_level"]:checked') ? document.querySelector('input[name="gym_level"]:checked').value : '',
-                foodAllergy: Array.from(document.querySelectorAll('input[name="food_allergy"]:checked')).map(input => input.value),
-                otherSports: document.querySelector('input[name="CAT_Custom_6"]:checked') ? document.querySelector('input[name="CAT_Custom_6"]:checked').value : '',
-                injuriesDiseases: document.getElementById('injuries_diseases').value,
-                dailyRoutine: document.getElementById('daily_routine').value,
-                supplements: document.getElementById('supplements').value
-            };
+        <script>
+            // Function to gather form data and send it to WhatsApp
+            function sendToWhatsApp() {
+                // Get all the selected answers
+                let formData = {
+                    name: document.getElementById('name').value,
+                    age: document.getElementById('age').value,
+                    height: document.getElementById('CAT_Custom_2').value,
+                    weight: document.getElementById('range-weight').value,
+                    gender: document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '',
+                    protein: Array.from(document.querySelectorAll('input[name="protein_type"]:checked')).map(input => input.value),
+                    carbs: Array.from(document.querySelectorAll('input[name="carbs_type"]:checked')).map(input => input.value),
+                    veggies: Array.from(document.querySelectorAll('input[name="veggies_type"]:checked')).map(input => input.value),
+                    nuts: Array.from(document.querySelectorAll('input[name="nuts_type"]:checked')).map(input => input.value),
+                    fruits: Array.from(document.querySelectorAll('input[name="fruits_type"]:checked')).map(input => input.value),
+                    meals: document.querySelector('input[name="meals_type"]:checked') ? document.querySelector('input[name="meals_type"]:checked').value : '',
+                    mealVariation: document.querySelector('input[name="meal_variation"]:checked') ? document.querySelector('input[name="meal_variation"]:checked').value : '',
+                    trainingDays: document.querySelector('input[name="training_days"]:checked') ? document.querySelector('input[name="training_days"]:checked').value : '',
+                    foodScale: document.querySelector('input[name="food_scale"]:checked') ? document.querySelector('input[name="food_scale"]:checked').value : '',
+                    weakMuscle: document.querySelector('input[name="weak_muscle"]:checked') ? document.querySelector('input[name="weak_muscle"]:checked').value : '',
+                    gymLevel: document.querySelector('input[name="gym_level"]:checked') ? document.querySelector('input[name="gym_level"]:checked').value : '',
+                    foodAllergy: Array.from(document.querySelectorAll('input[name="food_allergy"]:checked')).map(input => input.value),
+                    otherSports: document.querySelector('input[name="CAT_Custom_6"]:checked') ? document.querySelector('input[name="CAT_Custom_6"]:checked').value : '',
+                    injuriesDiseases: document.getElementById('injuries_diseases').value,
+                   
+                    supplements: document.getElementById('supplements').value,
+        
+                    // البيانات الجديدة
+                    dietBudget: document.querySelector('input[name="diet_budget"]:checked') ? document.querySelector('input[name="diet_budget"]:checked').value : '',
+                    goal: document.querySelector('input[name="goal"]:checked') ? document.querySelector('input[name="goal"]:checked').value : '',
+                    dailyRoutine2: document.getElementById('daily_routine2').value,
+                    foodAllergy2: document.querySelector('input[name="food_allergy2"]:checked') ? document.querySelector('input[name="food_allergy2"]:checked').value : ''
+                };
+        
+                // Construct the message for WhatsApp
+                let message = `Form Data: 
+        Name: ${formData.name}
+        Age: ${formData.age}
+        Height: ${formData.height}
+        Weight: ${formData.weight}
+        Gender: ${formData.gender}
+        Protein: ${formData.protein.join(", ")}
+        Carbs: ${formData.carbs.join(", ")}
+        Veggies: ${formData.veggies.join(", ")}
+        Nuts: ${formData.nuts.join(", ")}
+        Fruits: ${formData.fruits.join(", ")}
+        Meals per Day: ${formData.meals}
+        Meal Variation: ${formData.mealVariation}
+        Training Days per Week: ${formData.trainingDays}
+        Food Scale: ${formData.foodScale}
+        Weak Muscle Group: ${formData.weakMuscle}
+        Gym Level: ${formData.gymLevel}
+        Food Allergy: ${formData.foodAllergy.join(", ")}
+        Other Sports: ${formData.otherSports}
+        Injuries/Chronic Diseases: ${formData.injuriesDiseases}
 
-            // Construct the message for WhatsApp
-            let message = `Form Data: 
-Name: ${formData.name}
-Age: ${formData.age}
-Height: ${formData.height}
-Weight: ${formData.weight}
-Gender: ${formData.gender}
-Protein: ${formData.protein.join(", ")}
-Carbs: ${formData.carbs.join(", ")}
-Veggies: ${formData.veggies.join(", ")}
-Nuts: ${formData.nuts.join(", ")}
-Fruits: ${formData.fruits.join(", ")}
-Meals per Day: ${formData.meals}
-Meal Variation: ${formData.mealVariation}
-Training Days per Week: ${formData.trainingDays}
-Food Scale: ${formData.foodScale}
-Weak Muscle Group: ${formData.weakMuscle}
-Gym Level: ${formData.gymLevel}
-Food Allergy: ${formData.foodAllergy.join(", ")}
-Other Sports: ${formData.otherSports}
-Injuries/Chronic Diseases: ${formData.injuriesDiseases}
-Daily Routine: ${formData.dailyRoutine}
-Supplements: ${formData.supplements}`;
-
-            // Encode message for URL
-            let encodedMessage = encodeURIComponent(message);
-
-            // Send the message to WhatsApp (replace with the correct number)
-            let whatsappURL = `https://wa.me/201208425542?text=${encodedMessage}`;
-
-            // Open WhatsApp link
-            window.open(whatsappURL, '_blank');
-        }
-
-        // Attach the function to the submit button
-        document.querySelector('#sendToWhatsApp').addEventListener('click', sendToWhatsApp);
-    </script>
-
+        Supplements: ${formData.supplements}
+        Diet Budget: ${formData.dietBudget}
+        Goal: ${formData.goal}
+        Daily Routine 2: ${formData.dailyRoutine2}
+        Food Allergy 2: ${formData.foodAllergy2}`;
+        
+                // Encode message for URL
+                let encodedMessage = encodeURIComponent(message);
+        
+                // Send the message to WhatsApp (replace with the correct number)
+                let whatsappURL = `https://wa.me/201208425542?text=${encodedMessage}`;
+        
+                // Open WhatsApp link
+                window.open(whatsappURL, '_blank');
+            }
+        
+            // Attach the function to the submit button
+            document.querySelector('#sendToWhatsApp').addEventListener('click', sendToWhatsApp);
+        </script>
 
 
 
@@ -760,8 +869,8 @@ Supplements: ${formData.supplements}`;
     </script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-    <script src="{% static 'js/mianform.js' %}"></script>
-    <script src="{% static 'js/language.js' %}"></script>
+    <script src="{% static 'assets/js/mianform.js' %}"></script>
+    <script src="{% static 'assets/js/language.js' %}"></script>
     <!-- <script src="js/navform.js"></script> -->
 
     <!-- jQuery easing plugin -->
