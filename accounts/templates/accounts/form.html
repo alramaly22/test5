@@ -741,6 +741,17 @@
     <i class="fa-brands fa-whatsapp wahtsapp-icon"></i>
         </a> -->
         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const paymentStatus = urlParams.get("status");
+        
+                if (paymentStatus === "paid") {
+                    window.location.href = "/form/";
+                }
+            });
+        </script>
+        
+        <script>
             // Function to gather form data and send it to WhatsApp
             function sendToWhatsApp() {
                 // Get all the selected answers
