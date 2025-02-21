@@ -266,7 +266,7 @@ let lang = {
         question_greenapple: "تفاح أخضر 🍏",
 
         question9: "السؤال 9",
-        questionmeals: "كم وجبة تحتاج في اليوم؟",
+        questionmeals: "محتاج كام وجبه في يومك ؟",
 
         question10: "السؤال 10",
         questionvariation: "عاوز ال ٣ وجبات اللي في نص يومك بنفس نوع البروتين، الكارب والخضار ولا حابب ننوع فيهم؟ مع العلم اننا نقدر نبدل فيهم براحتنا كل  ( ١٠ - ١٤ ) يوم في ال Check-ins بتاعتك! 🥘",
@@ -275,10 +275,10 @@ let lang = {
 
         question11: "السؤال 11",
         questiontrainingdays: "هتقدر تتمرن كام يوم في الاسبوع؟",
-        question_5or6days: "5 أو 6 (موصى به للحصول على نتائج أسرع)",
+        question_5or6days: "5 أو 6 (يكون افضل)",
 
         question12: "السؤال 12",
-        questionfoodscale: "هل لديك ميزان طعام؟",
+        questionfoodscale: "عندك ميزان اكل ؟",
         question_yes: "نعم",
         question_no: "لا",
 
@@ -298,8 +298,8 @@ let lang = {
 
         question15: "السؤال 15",
         questionallergy: "عندك اي حساسيه من اكل معين؟",
-        question_yes2: "نعم، لدي حساسية",
-        question_no2: "لا، أنا بخير",
+        question_yes2: "نعم",
+        question_no2: "لا",
 
         qution16: "السؤال 16",
         qutionothersports: "هل تمارس أي رياضات أخرى؟",
@@ -346,7 +346,44 @@ let lang = {
         photo_back: "الظهر",
         instructions_helper: "يُفضّل أن يلتقط شخص آخر الصور لك بدلاً من التقاطها بنفسك للحصول على أفضل جودة.",
         instructions_supplements: "هل لديك أي مكملات غذائية؟ 💊",
-        instructions_supplements_photos: "إذا كان لديك مكملات، يُرجى إرسال صور لها."
+        instructions_supplements_photos: "إذا كان لديك مكملات، يُرجى إرسال صور لها.",
+        numberform1: "السؤال 1",
+        numberform2: "السؤال 2",
+        numberform3: "السؤال 3",
+        numberform4: "السؤال 4",
+        numberform5: "السؤال 5",
+        numberform6: "السؤال 6",
+        numberform7: "السؤال 7",
+        numberform8: "السؤال 8",
+        numberform9: "السؤال 9",
+        numberform10: "السؤال 10",
+        numberform11: "السؤال 11",
+        numberform12: "السؤال 12",
+        numberform13: "السؤال 13",
+        numberform14: "السؤال 14",
+        numberform15: "السؤال 15",
+        numberform16: "السؤال 16",
+        numberform17: "السؤال 17",
+        numberform18: "السؤال 18",
+        numberform19: "السؤال 19",
+        numberform20: "السؤال 20",
+        numberform21: "السؤال 21",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+        numberform1: "",
+
+
+
 
 
 
@@ -687,14 +724,27 @@ let lang = {
         instructions_helper: "It is recommended that someone else take the photos for better quality instead of taking them yourself.",
         instructions_supplements: "Do you have any supplements? 💊",
         instructions_supplements_photos: "If you have any, please send pictures of them.",
-
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
-        formqution5: "",
+        numberform1: "Question 1",
+        numberform2: "Question 2",
+        numberform3: "Question 3",
+        numberform4: "Question 4",
+        numberform5: "Question 5",
+        numberform6: "Question 6",
+        numberform7: "Question 7",
+        numberform8: "Question 8",
+        numberform9: "Question 9",
+        numberform10: "Question 10",
+        numberform11: "Question 11",
+        numberform12: "Question 12",
+        numberform13: "Question 13",
+        numberform14: "Question 14",
+        numberform15: "Question 15",
+        numberform16: "Question 16",
+        numberform17: "Question 17",
+        numberform18: "Question 18",
+        numberform19: "Question 19",
+        numberform20: "Question 20",
+        numberform21: "Question 21",
         formqution5: "",
 
 
